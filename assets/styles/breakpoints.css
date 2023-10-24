@@ -1,0 +1,16 @@
+/* ============ only desktop view for dropdown menus | Omonjon ============ */
+@media all and (min-width: 992px) {
+}
+
+@media (max-width: 991px) {
+}
+
+/* ============ desktop view .end// ============ */
+@media (max-width: 767px) {
+    .scroll_up {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+}
