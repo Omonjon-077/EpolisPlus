@@ -391,8 +391,8 @@ a {
 
 .scroll_up:hover {
     transform: translateY(-.35rem);
-    background-color: var(--bs-white);
-    color: black;
+    background-color: var(--bs-secondary);
+    color: var(--bs-white);
 }
 
 /* Show Scroll Up*/
