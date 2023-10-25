@@ -356,6 +356,11 @@ a {
     width: 100%;
 }
 
+/* ==================== CALCULATOR SECTION | Omonjon ==================== */
+.line-position{
+    right: -150px;
+    top: 25px;
+}
 
 /*=============== SCROLL BAR | Omonjon ===============*/
 ::-webkit-scrollbar {
