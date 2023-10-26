@@ -33,10 +33,37 @@ const scrollUp = () => {
 }
 window.addEventListener('scroll', scrollUp);
 
+/*==================== VIDEO ====================*/
+const videoFile = document.getElementById('video-file'),
+    videoButton = document.getElementById('video-button'),
+    videoIcon = document.getElementById('video-icon')
 
+function playPause() {
+    if (videoFile.paused) {
+        // Play video
+        videoFile.play()
+        videoFile.style = "backround: initial;width: 100% !important; max-height: 679px; height: 100%;"
+        videoButton.classList.add('play-self')
+        // We change the icon
+        videoIcon.classList.add('bx-pause')
+        videoIcon.classList.remove('bx-play')
+    } else {
+        // Pause video
+        videoFile.pause();
+        videoButton.classList.remove('play-self')
+        // We change the icon
+        videoIcon.classList.remove('bx-pause')
+        videoIcon.classList.add('bx-play')
+    }
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    const progressBar = document.querySelector('.progress-bar');
-    const numSteps = progressBar.children.length;
-    progressBar.style.setProperty('--num-steps', numSteps);
-});
+videoButton.addEventListener('click', playPause)
+
+function finalVideo() {
+    // Video ends, icon change
+    videoIcon.classList.remove('bx-pause')
+    videoIcon.classList.add('bx-play')
+}
+
+// ended, when the video ends
+videoFile.addEventListener('ended', finalVideo)

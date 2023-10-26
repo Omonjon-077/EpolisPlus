@@ -362,6 +362,35 @@ a {
     top: 25px;
 }
 
+/* ==================== VIDEO PLAYER | Omonjon ==================== */
+.video__button {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50% !important;
+}
+
+.play-self{
+    bottom: -20px;
+    right: 20px;
+    margin: auto 40px 0 auto;
+}
+
+.video__content {
+    position: relative;
+}
+
+.video__button-icon {
+    color: var(--bs-secondary);
+    font-size: 2rem;
+}
+
+
 /*=============== SCROLL BAR | Omonjon ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
