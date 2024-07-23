@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--================ DESCRIPTION | Omonjon ================-->
-    <meta name="description" content="ePolis, Страховой компании в Узбекистан">
+    <meta name="description" content="EpolisPlus, Страховой компании в Узбекистан">
 
     <!--================ FAVICON | Omonjon ================-->
     <link rel="shortcut icon" href="assets/images/svg/site-logo.svg" type="image/x-icon">
 
     <!--============== BOX ICONS CSS 2.1.4v | Omonjon ==============-->
     <link rel="stylesheet" href="assets/styles/boxicons.min.css">
+
+    <!--============== SWIPER CSS 8.1.1v | Omonjon ==============-->
+    <link rel="stylesheet" href="assets/styles/swiper-bundle.min.css">
 
     <!--================ BOOTSTRAP CSS 5.3v | Omonjon ===============-->
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
@@ -21,111 +24,252 @@
     <link rel="stylesheet" href="assets/styles/main.css?v=0.5">
     <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.2">
 
-    <title>ePolis</title>
+    <title>EpolisPlus</title>
 </head>
 
 <body>
 <!--================ MENUS MODAL | Omonjon ================-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="container-sm container-fluid d-flex">
-                    <button type="button" class="btn-close box-shadow-none text-primary px-0" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                </div>
+<div class="offcanvas offcanvas-top m-2 primary-radius" style="" tabindex="-1" id="offcanvasTop"
+     aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"><img src="assets/images/svg/site-logo.svg" alt=""></h5>
+        <button type="button"
+                class="rounded-circle-mb primary-shadow border-0 d-flex align-items-center bg-white justify-content-center"
+                data-bs-dismiss="offcanvas" aria-label="Close"><img src="./assets/images/svg/x.svg" alt=""></button>
+    </div>
+    <div class="offcanvas-body overflow-y-visible pt-0">
+        <ul class="d-flex flex-column align-items-center border-top-dashed pt-3 row-gap-3 mb-3 mb-sm-0">
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#!">
+                    <img src="./assets/images/svg/shield.svg" alt="">
+                    Гарантийный код
+                </a>
+            </li>
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#!">
+                    <img src="./assets/images/svg/calculator.svg" alt="">
+                    Калькулятор полисов
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#!">
+                    О нас
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#!">
+                    Как стать партнером
+                </a>
+            </li>
+        </ul>
+        <div class="d-sm-none d-flex align-items-center flex-column border-top-dashed pt-3">
+            <div class="nav-item-top d-none dropdown">
+                <!-- Language -->
+
+                <a class="nav-link-sm d-flex align-items-center fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                   href="#" id="navbarDropdownLang" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="assets/images/ru-flag.png" alt=""> RU
+                </a>
+                <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                    style="min-width: auto">
+                    <li>
+                        <a class="ru d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="assets/images/en-flag.png" alt="">EN</a>
+                    </li>
+                    <li>
+                        <a class="en d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="assets/images/uz-flag.png" alt="">UZ</a>
+                    </li>
+                </ul>
+                <!-- End Language -->
             </div>
-            <div class="modal-body bg-secondary pt-md-5 pt-sm-3 pt-3">
-                <div class="container-sm container-fluid">
-                    <div class="row row-gap-3">
-                        <div class="col-12">
-                            <div class="d-flex flex-column align-items-center row-gap-2">
-                                <h3 class="fs-4 text-primary mb-3">ePolis Sugʻurta</h3>
-                                <ul class="d-flex flex-column align-items-center row-gap-3">
-                                    <li><a class="text-white fw-bold text-uppercase" href="#">OSAGO</a></li>
-                                    <li><a class="text-white fw-bold text-uppercase" href="#">KASKO</a></li>
-                                    <li><a class="text-white fw-bold text-uppercase" href="#">Travel</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#!"
+               class="btn-primary bg-white primary-shadow border-light border border-2 mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
+                <img src="./assets/images/svg/user.svg" alt="" class="">
+                <span class="text-black fs-8 fw-regular">Войти</span>
+            </a>
         </div>
     </div>
 </div>
 
 <!--==================== HEADER | Omonjon ====================-->
-<header class="header">
-    <nav class="py-3 bg-secondary" id="myHeader">
-        <div class="container">
+<header class="header position-relative">
+    <nav class="py-3 position-absolute top-0 end-0 start-0" id="myHeader">
+        <div class="container-fluid px-3 px-lg-4 px-xl-5">
             <div class="d-flex align-items-center justify-content-between">
-                <a class="d-flex align-items-center column-gap-2 me-lg-5 me-0" href="#!"><img alt="LOGO"
-                                                                                              src="assets/images/svg/site-logo.svg"></a>
-                <ul class="d-lg-flex d-none align-items-center column-gap-4">
+                <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="#!"><img
+                        alt="LOGO"
+                        src="assets/images/svg/site-logo.svg"></a>
+                <ul class="d-lg-flex d-none align-items-center column-gap-4 ms-0 ms-xl-4">
                     <li class="nav-item">
-                        <a class="transition primary-hover opacity-7 fs-7 fw-bold text-white"
+                        <a class="fw-semibold text-black"
                            aria-current="page" href="#!">
-                            OSAGO
+                            <img src="./assets/images/svg/shield.svg" alt="">
+                            Гарантийный код
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="transition primary-hover opacity-7 fs-7 fw-bold text-white"
+                        <a class="fw-semibold text-black"
                            aria-current="page" href="#!">
-                            KASKO
+                            <img src="./assets/images/svg/calculator.svg" alt="">
+                            Калькулятор полисов
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="transition primary-hover opacity-7 fs-7 fw-bold text-white"
+                        <a class="fw-semibold text-black"
                            aria-current="page" href="#!">
-                            TRAVEL
+                            <img src="./assets/images/svg/briefcase.svg" alt="">
+                            О компании
                         </a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center column-gap-sm-3 column-gap-2 ms-auto">
+                    <div class="nav-item-top dropdown">
+                        <!-- Language -->
+
+                        <a class="nav-link-sm d-flex align-items-center fs-8 fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                           href="#" id="navbarDropdownLangTwo" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="assets/images/ru-flag.png" alt=""> RU
+                        </a>
+                        <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                            style="min-width: auto">
+                            <li>
+                                <a class="ru fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                                   href="#"><img src="assets/images/en-flag.png" alt="">EN</a>
+                            </li>
+                            <li>
+                                <a class="en fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                                   href="#"><img src="assets/images/uz-flag.png" alt="">UZ</a>
+                            </li>
+                        </ul>
+                        <!-- End Language -->
+                    </div>
                     <a href="#!"
-                       class="btn-primary bg-transparent border-1 border border-danger d-flex column-gap-2 py-sm-2 px-sm-3 py-1 px-2">
-                        <img src="./assets/images/svg/bell.svg" alt="" class="">
-                        <span class="d-none d-sm-block text-danger fs-8 fw-bold">LiTRO</span>
+                       class="btn transition btn-secondary primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
+                        <img src="./assets/images/svg/phone.svg" alt="" class="">
+                        <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
                     </a>
-                    <a href="#!" class="btn-primary py-sm-2 px-sm-3 py-1 px-2 d-flex column-gap-2">
+                    <a href="#!"
+                       class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn-white primary-radius py-2 px-3">
                         <img src="./assets/images/svg/user.svg" alt="" class="">
-                        <span class="d-none d-sm-block text-white fs-8 fw-bold">Sign in</span>
+                        <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
                     </a>
                 </div>
                 <button type="button"
-                        class="outline-none border-none bg-transparent d-lg-none d-flex align-items-center justify-content-center ms-auto"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fs-2 text-primary bx bx-menu"></i>
+                        class="outline-none border-none bg-white primary-shadow rounded-circle-mb d-lg-none d-flex align-items-center justify-content-center py-2 px-3 ms-3"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <img src="./assets/images/svg/menu-burger.svg" style="width: 16px;" alt="">
                 </button>
             </div>
         </div>
     </nav>
+    <div class="container pt-5">
+        <div class="swiper mt-5 introSwiper">
+            <div class="swiper-wrapper mt-5">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
+                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3">
+                                    Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
+                                    спокойствия.
+                                </div>
+                                <a href="#!"
+                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                    полис <i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-1 d-none d-xl-block"></div>
+                        <div class="col-xl-5 col-lg-6 col-md-5 d-none d-md-block">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/swiperImg-1.png" class="w-100 h-100" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
+                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3">
+                                    Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
+                                    спокойствия. Two
+                                </div>
+                                <a href="#!"
+                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                    полис <i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-1 d-none d-xl-block"></div>
+                        <div class="col-xl-5 col-lg-6 col-md-5 d-none d-md-block">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/swiperImg-1.png" class="w-100 h-100" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
+                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3">
+                                    Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
+                                    спокойствия. Three
+                                </div>
+                                <a href="#!"
+                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                    полис <i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-1 d-none d-xl-block"></div>
+                        <div class="col-xl-5 col-lg-6 col-md-5 d-none d-md-block">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/swiperImg-1.png" class="w-100 h-100" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
+                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3">
+                                    Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
+                                    спокойствия. Four
+                                </div>
+                                <a href="#!"
+                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                    полис <i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-1 d-none d-xl-block"></div>
+                        <div class="col-xl-5 col-lg-6 col-md-5 d-none d-md-block">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/swiperImg-1.png" class="w-100 h-100" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 </header>
 
 <!--================ MAIN | Omonjon ================-->
 <main>
-    <!--==================== INTRO | Omonjon ====================-->
-    <section class="intro-section py-5 bg-secondary">
-        <div class="container">
-            <div class="row py-md-5 py-sm-4 py-3 row-gap-4">
-                <div class="col-12 col-lg-6">
-                    <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-start h-100">
-                        <h4 class="display-5 text-white fw-bold mb-4 text-center text-lg-start">Что-то неожиданное
-                            случилось по дороге?</h4>
-                        <p class="fs-7 text-white opacity-7 fw-normal text-center text-lg-start mb-md-5 mb-4">С сервисом
-                            LiTRO вы никогда не останетесь с проблемой наедине.</p>
-                        <a class="btn btn-primary px-4 py-2 text-center text-lg-start" href="#!">Купить полис</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="d-flex">
-                        <img src="assets/images/intro-img.png" alt="Picture" class="w-100">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--==================== CALCULATOR | Omonjon ====================-->
     <section class="calculator-section py-5">
@@ -344,116 +488,6 @@
         </div>
     </section>
 
-    <!--==================== HOW WORK | Omonjon ====================-->
-    <section class="how-work py-5">
-        <div class="container">
-            <h4 class="text-center text-secondary fs-1 fw-bold">How Does It Work?</h4>
-            <div class="d-flex justify-content-center">
-                <p class="text-center text-secondary fw-normal fs-7 mt-3" style="max-width: 576px; width: 100%;">Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit
-                    volutpat mollis egestas nam luctus facilisis ultrices</p>
-            </div>
-            <div class="row pt-5 row-gap-3 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="d-flex flex-column align-items-center position-relative">
-                        <div class="d-flex justify-content-center align-items-center z-index-5">
-                            <img src="./assets/images/step-1.png" alt="Step">
-                        </div>
-                        <h5 class="fs-4 text-secondary fw-bold text-center mt-4 mb-3">Choose city</h5>
-                        <p class="fs-7 text-secondary fw-normal text-center">Massa enim libero dictumst consectetur in
-                            convallis lobortis </p>
-                        <div class="d-lg-block d-none position-absolute z-index-1 line-position">
-                            <img src="./assets/images/svg/line.svg" alt="Line">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="d-flex flex-column align-items-center position-relative">
-                        <div class="d-flex justify-content-center align-items-center z-index-5">
-                            <img src="./assets/images/step-2.png" alt="Step">
-                        </div>
-                        <h5 class="fs-4 text-secondary fw-bold text-center mt-4 mb-3">Your car details</h5>
-                        <p class="fs-7 text-secondary fw-normal text-center">Massa enim libero dictumst consectetur in
-                            convallis lobortis</p>
-                        <div class="d-lg-block d-none position-absolute z-index-1 line-position">
-                            <img src="./assets/images/svg/line.svg" alt="Line">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="d-flex flex-column align-items-center position-relative">
-                        <div class="d-flex justify-content-center align-items-center z-index-5">
-                            <img src="./assets/images/step-3.png" alt="Step">
-                        </div>
-                        <h5 class="fs-4 text-secondary fw-bold text-center mt-4 mb-3">Service </h5>
-                        <p class="fs-7 text-secondary fw-normal text-center">At ultricies id non quisque integer eget
-                            velit. Facilisis enim </p>
-                        <div class="d-lg-block d-none position-absolute z-index-1 line-position">
-                            <img src="./assets/images/svg/line.svg" alt="Line">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="d-flex flex-column align-items-center position-relative">
-                        <div class="d-flex justify-content-center align-items-center z-index-5">
-                            <img src="./assets/images/step-4.png" alt="Step">
-                        </div>
-                        <h5 class="fs-4 text-secondary fw-bold text-center mt-4 mb-3">Payment</h5>
-                        <p class="fs-7 text-secondary fw-normal text-center">Pellentesque rhoncus viverra vestibulum,
-                            purus purus </p>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex mt-4">
-                <div class="video__content w-100">
-                    <video id="video-file" muted
-                           style="width: 100% !important; max-height: 679px; height: 100%;background: #edf3fa;"
-                           poster="assets/images/poster.png">
-                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                                type="video/mp4">
-                    </video>
-                    <button class="button button--flex border-none outline-none video__button" id="video-button">
-                        <i class="bx bx-play video__button-icon" id="video-icon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--==================== ORDERS | Omonjon ====================-->
-    <section class="order-section py-5">
-        <div class="container">
-            <div class="d-flex rounded-3 bg-secondary p-5">
-                <div class="row row-gap-4">
-                    <div class="col-12 col-xl-5 col-lg-6">
-                        <div class="d-flex flex-column align-items-center align-items-lg-start row-gap-4 row-gap-lg-5 ps-xl-5">
-                            <h6 class="fs-1 text-white fw-bold text-lg-start text-center">Let's order your first service
-                                easier now!</h6>
-                            <a class="btn w-max-content btn-primary py-2 px-4" href="#!">Call now</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-1 d-none d-xl-block"></div>
-                    <div class="col-12 col-xl-6 col-lg-6">
-                        <div class="d-flex flex-column row-gap-2">
-                            <p class="fs-6 text-gray fw-normal d-flex align-items-start justify-content-center justify-content-lg-start text-center text-lg-start">
-                                <img class="me-2 d-none d-lg-flex" src="assets/images/svg/check.svg"
-                                     alt="">Purus vestibulum pharetra amet tincidunt
-                                pretium</p>
-                            <p class="fs-6 text-gray fw-normal d-flex align-items-start justify-content-center justify-content-lg-start text-center text-lg-start">
-                                <img class="me-2 d-none d-lg-flex" src="assets/images/svg/check.svg"
-                                     alt="">Haretra justo magna pharetra dui gravida sed
-                                nec</p>
-                            <p class="fs-6 text-gray fw-normal d-flex align-items-start justify-content-center justify-content-lg-start text-center text-lg-start">
-                                <img class="me-2 d-none d-lg-flex" src="assets/images/svg/check.svg"
-                                     alt="">Venenatis risus faucibus volutpat amet
-                                feugiat a</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <!--================ FOOTER | Omonjon ================-->
@@ -478,10 +512,12 @@
                         src="./assets/images/svg/instagram.svg" alt="" class=""></a></li>
                 <li><a href="#!" class="footer-linkBg d-flex align-items-center justify-content-center rounded-2"><img
                         src="./assets/images/svg/x.svg" alt="" class=""></a></li>
-                <li><a href="#!" class="footer-linkBg d-flex align-items-center justify-content-center rounded-2 bg-white"><img
+                <li><a href="#!"
+                       class="footer-linkBg d-flex align-items-center justify-content-center rounded-2 bg-white"><img
                         src="./assets/images/svg/youtube.svg" alt="" class=""></a></li>
             </ul>
-            <p class="fs-8 text-gray fw-normal text-center" style="max-width: 855px;width: 100%;">2021. All rights reserved. Pulvinar urna condimentum amet tempor, ornare integer. Lorem odio
+            <p class="fs-8 text-gray fw-normal text-center" style="max-width: 855px;width: 100%;">2021. All rights
+                reserved. Pulvinar urna condimentum amet tempor, ornare integer. Lorem odio
                 justo malesuada suspendisse viverra aliquet quisque turpis non. Feugiat in odio non nunc ornare
                 consectetur.</p>
         </div>
@@ -495,6 +531,12 @@
 
 <!--================ JQUERY JS 3.6.3v | Omonjon ================-->
 <script src="assets/script/jquery-3.6.3.js"></script>
+
+<!--================ LOTTIE JS 7.7.7v | Omonjon ================-->
+<script src="assets/script/lottie-player.js"></script>
+
+<!--================ SWIPER JS 8.1.1v | Omonjon ================-->
+<script src="assets/script/swiper-bundle.min.js"></script>
 
 <!--================ BOOTSTRAP JS 5.3.1v | Omonjon ================-->
 <script src="assets/script/bootstrap.bundle.min.js"></script>

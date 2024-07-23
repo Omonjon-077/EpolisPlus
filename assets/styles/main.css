@@ -1,5 +1,5 @@
-/* Google Fonts | Omonjon */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+/* Fonts | Omonjon */
+@import url(./fonts.css);
 
 /* Bootstrap tools | Omonjon */
 * {
@@ -9,34 +9,17 @@
 }
 
 :root {
-    --title-color: #313131;
-    --title-color-after: rgb(20, 82, 159);
-    --text-color: #000000;
-    --text-color-light: #737387;
-    --color-gray: #F1F2F4;
+    --primary-radius: 12px;
     --primary-transition: 0.37s;
 }
 
 body {
-    font-family: Manrope, sans-serif;
-    font-weight: 400;
+    font-family: 'Geist regular', sans-serif;
     font-size: 1rem;
 }
 
-.title-color {
-    color: var(--title-color) !important;
-}
-
-.title-color-after {
-    color: var(--title-color-after) !important;
-}
-
-.text-color {
-    color: var(--text-color) !important;
-}
-
-.text-color-light {
-    color: var(--text-color-light) !important;
+.primary-radius {
+    border-radius: var(--primary-radius) !important;
 }
 
 .no-select {
@@ -110,12 +93,6 @@ button[aria-expanded^="true"] i {
     box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
 }
 
-.btn-primary {
-    border-radius: 10px;
-    color: var(--bs-white);
-    background: var(--bs-primary);
-}
-
 .box-shadow-none {
     box-shadow: none !important;
 }
@@ -132,15 +109,14 @@ button[aria-expanded^="true"] i {
     background: #EFF2FC;
 }
 
-.btn-secondary {
-    border-radius: 2px;
-    color: var(--bs-primary);
-    border: 1px solid var(--bs-primary);
-    background: transparent;
-}
-
 .cursor-pointer {
     cursor: pointer;
+}
+
+.btn-white {
+    border: 1px solid #EFEFEF !important;
+    background: white;
+    color: black;
 }
 
 .z-index-1 {
@@ -199,6 +175,10 @@ button[aria-expanded^="true"] i {
     font-size: 0.75rem !important;
 }
 
+.border-top-dashed {
+    border-top: 1px dashed var(--bs-border-color);
+}
+
 .w-max-content {
     width: max-content !important;
 }
@@ -226,6 +206,7 @@ button[aria-expanded^="true"] i {
 input,
 button {
     outline: none;
+    border: 0;
 }
 
 .dropdown-arrow::after {
@@ -260,12 +241,7 @@ button {
     opacity: 1;
 }
 
-.btn:hover,
-.btn:focus{
-    background: var(--bs-primary) !important;
-}
-
-.btn{
+.btn {
     border: none;
 }
 
@@ -283,10 +259,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* .form-select{
     --bs-form-select-bg-img: none;
 } */
-
-.shadow-swiperBtn {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
 
 li,
 ul,
@@ -306,17 +278,40 @@ a {
 }
 
 /* ==================== HEADER | Omonjon ==================== */
+#myHeader {
+    background-color: transparent;
+}
+
+/*.introSwiper.swiper {*/
+/*    height: 500px;*/
+/*}*/
+
+.header .dropdown-menu {
+    min-width: auto;
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 0;
+    transform: translate(0px, 26px);
+}
+
+.header .dropdown-item:hover {
+    color: black;
+    background-color: #00A0700D;
+}
+
 .sticky {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     width: 100%;
-    background: white;
+    background: white !important;
     z-index: 10;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 /* ==================== CALCULATOR SECTION | Omonjon ==================== */
-.calculator-box{
+.calculator-box {
     max-width: 1080px;
     width: 100%;
     border-radius: 20px;
@@ -324,7 +319,7 @@ a {
     box-shadow: -7px 21px 96px 0px rgba(35, 33, 75, 0.13);
 }
 
-.nav-tabs .nav-link{
+.nav-tabs .nav-link {
     display: flex;
     padding: 8px 16px;
     border-radius: 6px;
@@ -338,26 +333,26 @@ a {
     font-weight: 600;
 }
 
-.nav-tabs .nav-link svg path{
+.nav-tabs .nav-link svg path {
     fill: var(--bs-gray);
 }
 
-.nav-tabs .active{
+.nav-tabs .active {
     background: var(--bs-primary) !important;
     color: var(--bs-white) !important;
 }
 
-.nav-tabs .active svg path{
+.nav-tabs .active svg path {
     fill: white;
 }
 
-.calculator-w{
+.calculator-w {
     max-width: 121px;
     width: 100%;
 }
 
 /* ==================== CALCULATOR SECTION | Omonjon ==================== */
-.line-position{
+.line-position {
     right: -150px;
     top: 25px;
 }
@@ -375,7 +370,7 @@ a {
     border-radius: 50% !important;
 }
 
-.play-self{
+.play-self {
     bottom: -20px;
     right: 20px;
     margin: auto 40px 0 auto;
@@ -391,7 +386,7 @@ a {
 }
 
 /* ==================== VIDEO PLAYER | Omonjon ==================== */
-.footer-linkBg{
+.footer-linkBg {
     background: rgba(255, 255, 255, 0.05);
     padding: 12px;
 }

@@ -2,7 +2,11 @@
 @media all and (min-width: 992px) {
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
+    .rounded-circle-mb {
+        border-radius: 50% !important;
+        padding: 10px !important;
+    }
 }
 
 /* ============ desktop view .end// ============ */
@@ -10,14 +14,23 @@
     .scroll_up {
         right: 1rem;
     }
+
+    .offcanvas.offcanvas-top {
+        height: 250px;
+    }
 }
 
 @media (max-width: 575px) {
-    .video__button{
-        width: 40px;
-        height: 40px;
+    .offcanvas.offcanvas-top {
+        height: 350px;
     }
-    .video__button-icon{
-        font-size: 1.5rem;
+}
+
+@media (max-width: 390px) {
+    .header .nav-item-top.dropdown {
+        display: none;
+    }
+    .offcanvas .nav-item-top.dropdown {
+        display: block !important;
     }
 }
