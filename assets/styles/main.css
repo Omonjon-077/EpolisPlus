@@ -16,6 +16,7 @@
 body {
     font-family: 'Geist regular', sans-serif;
     font-size: 1rem;
+    background-color: #fafafa;
 }
 
 .primary-radius {
@@ -310,6 +311,19 @@ a {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.header .swiper-button-prev:after,
+.header .swiper-button-next:after {
+    content: '';
+}
+
+.header .swiper-button-prev {
+    left: 94% !important;
+}
+
+.header .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--bs-primary);
+}
+
 /* ==================== CALCULATOR SECTION | Omonjon ==================== */
 .calculator-box {
     max-width: 1080px;
@@ -320,35 +334,27 @@ a {
 }
 
 .nav-tabs .nav-link {
-    display: flex;
     padding: 8px 16px;
-    border-radius: 6px;
-    color: var(--bs-gray);
-    background: #EFF2FC;
-    justify-content: center;
-    align-items: center;
-    border: none;
+    background-color: #0A0A0A08;
     column-gap: 8px;
     font-size: 16px;
     font-weight: 600;
+    border: 1px solid transparent;
 }
 
 .nav-tabs .nav-link svg path {
-    fill: var(--bs-gray);
+    fill: transparent;
+    stroke: var(--bs-gray);
+    stroke-width: 1.5;
 }
 
-.nav-tabs .active {
-    background: var(--bs-primary) !important;
-    color: var(--bs-white) !important;
+.nav-tabs .nav-link.active {
+    background: var(--bs-white);
+    border: 1px solid #EFEFEF;
 }
 
-.nav-tabs .active svg path {
-    fill: white;
-}
-
-.calculator-w {
-    max-width: 121px;
-    width: 100%;
+.nav-tabs .nav-link.active svg path {
+    stroke: var(--bs-primary);
 }
 
 /* ==================== CALCULATOR SECTION | Omonjon ==================== */

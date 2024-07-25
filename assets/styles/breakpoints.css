@@ -1,5 +1,8 @@
 /* ============ only desktop view for dropdown menus | Omonjon ============ */
-@media all and (min-width: 992px) {
+@media all and (max-width: 1399px) {
+    .header .swiper-button-prev {
+        left: 93% !important;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -7,12 +10,26 @@
         border-radius: 50% !important;
         padding: 10px !important;
     }
+
+    .header .swiper-button-prev {
+        left: 91% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header .swiper-button-prev {
+        left: 88% !important;
+    }
 }
 
 /* ============ desktop view .end// ============ */
 @media (max-width: 767px) {
     .scroll_up {
         right: 1rem;
+    }
+
+    .header .swiper-button-prev {
+        left: 84.5% !important;
     }
 
     .offcanvas.offcanvas-top {
@@ -30,6 +47,7 @@
     .header .nav-item-top.dropdown {
         display: none;
     }
+
     .offcanvas .nav-item-top.dropdown {
         display: block !important;
     }

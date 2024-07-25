@@ -170,14 +170,15 @@
         </div>
     </nav>
     <div class="container pt-5">
-        <div class="swiper mt-5 introSwiper">
-            <div class="swiper-wrapper mt-5">
+        <div class="swiper position-relative mt-5 introSwiper">
+            <div class="swiper-wrapper mt-3 mt-md-5">
                 <div class="swiper-slide">
                     <div class="row">
                         <div class="col-lg-6 col-md-7">
                             <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
-                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
-                                <div class="fs-5 text-black mt-3 mb-3">
+                                <h5 class="display-5 fw-semibold text-black text-center text-md-start">Путешествуйте с
+                                    уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3 text-center text-sm-start">
                                     Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
                                     спокойствия.
                                 </div>
@@ -198,8 +199,9 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-7">
                             <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
-                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
-                                <div class="fs-5 text-black mt-3 mb-3">
+                                <h5 class="display-5 fw-semibold text-black text-center text-md-start">Путешествуйте с
+                                    уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3 text-center text-sm-start">
                                     Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
                                     спокойствия. Two
                                 </div>
@@ -220,8 +222,9 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-7">
                             <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
-                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
-                                <div class="fs-5 text-black mt-3 mb-3">
+                                <h5 class="display-5 fw-semibold text-black text-center text-md-start">Путешествуйте с
+                                    уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3 text-center text-sm-start">
                                     Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
                                     спокойствия. Three
                                 </div>
@@ -242,8 +245,9 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-7">
                             <div class="d-flex justify-content-center align-items-center align-items-lg-start flex-column h-100">
-                                <h5 class="display-5 fw-semibold text-black">Путешествуйте с уверенностью!</h5>
-                                <div class="fs-5 text-black mt-3 mb-3">
+                                <h5 class="display-5 fw-semibold text-black text-center text-sm-start">Путешествуйте с
+                                    уверенностью!</h5>
+                                <div class="fs-5 text-black mt-3 mb-3 text-center text-sm-start">
                                     Страхование TRAVEL обеспечивает полную безопасность за рубежом для вашего
                                     спокойствия. Four
                                 </div>
@@ -261,227 +265,163 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination position-static mt-4"></div>
+            <div class="d-sm-flex d-none align-items-center position-absolute bottom-0 end-0 w-100 mt-5"
+                 style="height: 40px">
+                <div class="swiper-button-next">
+                    <i class='bx fs-5 btn-white rounded-circle text-light-emphasis p-2 bx-chevron-right'></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class='bx fs-5 btn-white rounded-circle text-light-emphasis p-2 bx-chevron-left'></i>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center my-4 my-md-5">
+        <img src="./assets/images/section-line.png" alt="">
     </div>
 </header>
 
 <!--================ MAIN | Omonjon ================-->
 <main>
-
     <!--==================== CALCULATOR | Omonjon ====================-->
     <section class="calculator-section py-5">
         <div class="container">
-            <div class="calculator-box p-5 mx-auto">
-                <div class="d-flex flex-column align-items-center w-100">
-                    <h4 class="text-black fw-bold fs-3 text-center">Calculator</h4>
-                    <div class="mt-md-5 mt-4 d-flex flex-column align-items-center">
-                        <ul class="nav nav-tabs column-gap-3 column-gap-sm-4 border-none" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                        data-bs-target="#home-tab-pane" type="button" role="tab"
-                                        aria-controls="home-tab-pane" aria-selected="true">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <g opacity="1">
-                                            <path d="M15.579 7.617L14.553 4.53825C14.2462 3.618 13.389 3 12.4193 3H5.58075C4.611 3 3.75375 3.618 3.447 4.53825L2.421 7.617C1.881 7.84425 1.5 8.37825 1.5 9V12.75C1.5 13.3147 1.81725 13.8015 2.27925 14.0573C2.2695 14.1068 2.25 14.1517 2.25 14.2035V15.75C2.25 16.1648 2.58525 16.5 3 16.5H3.75C4.16475 16.5 4.5 16.1648 4.5 15.75V14.25H13.5V15.75C13.5 16.1648 13.8352 16.5 14.25 16.5H15C15.4148 16.5 15.75 16.1648 15.75 15.75V14.2035C15.75 14.1517 15.7305 14.106 15.7208 14.0573C16.1828 13.8015 16.5 13.3147 16.5 12.75V9C16.5 8.37825 16.119 7.84425 15.579 7.617ZM3 12.75V9H15L15.0015 12.75H3ZM5.58075 4.5H12.4185C12.7418 4.5 13.0282 4.7055 13.1302 5.013L13.9598 7.5H4.04025L4.869 5.013C4.97175 4.7055 5.25825 4.5 5.58075 4.5Z"
-                                                  fill="white"/>
-                                            <path d="M4.875 12C5.49632 12 6 11.4963 6 10.875C6 10.2537 5.49632 9.75 4.875 9.75C4.25368 9.75 3.75 10.2537 3.75 10.875C3.75 11.4963 4.25368 12 4.875 12Z"
-                                                  fill="white"/>
-                                            <path d="M13.125 12C13.7463 12 14.25 11.4963 14.25 10.875C14.25 10.2537 13.7463 9.75 13.125 9.75C12.5037 9.75 12 10.2537 12 10.875C12 11.4963 12.5037 12 13.125 12Z"
-                                                  fill="white"/>
-                                        </g>
-                                    </svg>
-                                    <span class="d-none d-sm-block">Home</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                        aria-controls="profile-tab-pane" aria-selected="false">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.88705 10.7423L3.76955 15.5812C3.70055 15.8805 3.82055 16.1918 4.07405 16.3665C4.2023 16.455 4.3508 16.5 4.50005 16.5C4.6448 16.5 4.7903 16.458 4.9163 16.374L9.00005 13.6515L13.0838 16.374C13.3448 16.548 13.6876 16.5413 13.9426 16.356C14.1961 16.1708 14.3078 15.846 14.2216 15.5445L12.8498 10.7445L16.2518 7.683C16.4746 7.482 16.5563 7.1685 16.4603 6.885C16.3636 6.6015 16.1078 6.402 15.8093 6.378L11.5336 6.0375L9.6833 1.94175C9.56255 1.6725 9.2948 1.5 9.00005 1.5C8.7053 1.5 8.43755 1.6725 8.3168 1.94175L6.46655 6.0375L2.1908 6.37725C1.8968 6.4005 1.64405 6.59325 1.54505 6.87C1.44455 7.14675 1.51655 7.4565 1.72655 7.662L4.88705 10.7423ZM7.0268 7.49775C7.29905 7.476 7.53905 7.308 7.6508 7.05825L9.00005 4.0725L10.3493 7.05825C10.4611 7.308 10.7011 7.476 10.9733 7.49775L13.9523 7.734L11.4991 9.942C11.2861 10.134 11.2013 10.4295 11.2793 10.7055L12.2191 13.9943L9.41705 12.126C9.16505 11.9572 8.8373 11.9572 8.5853 12.126L5.6573 14.0782L6.4448 10.6688C6.5033 10.4138 6.4253 10.146 6.2378 9.96375L3.9593 7.74225L7.0268 7.49775Z"
-                                              fill="#9397AD"/>
-                                    </svg>
-                                    <span class="d-none d-sm-block">Profile</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
-                                        data-bs-target="#contact-tab-pane" type="button" role="tab"
-                                        aria-controls="contact-tab-pane" aria-selected="false">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.4223 2.50493C15.2033 2.35568 14.9221 2.33318 14.6806 2.44568L1.93056 8.44568C1.66431 8.57168 1.49631 8.84093 1.50006 9.13493C1.50456 9.42893 1.68006 9.69368 1.95006 9.81143L6.00006 11.5837V16.6252L10.3771 13.4992L13.9501 15.0622C14.0461 15.1049 14.1488 15.1252 14.2501 15.1252C14.3858 15.1252 14.5201 15.0884 14.6401 15.0157C14.8486 14.8889 14.9828 14.6684 14.9993 14.4247L15.7493 3.17468C15.7658 2.90918 15.6421 2.65493 15.4223 2.50493ZM13.5728 13.2599L9.62106 11.5304L12.0001 6.87518L6.26331 10.0627L4.06431 9.10043L14.1676 4.34543L13.5728 13.2599Z"
-                                              fill="#9397AD"/>
-                                    </svg>
-                                    <span class="d-none d-sm-block">Contact</span>
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content mt-4" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-                                 aria-labelledby="home-tab" tabindex="0">
-                                <form class="row justify-content-center row-gap-3" action="" method="post">
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputEmail1" class="form-label fs-7 fw-bold text-black">Car
-                                            number</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               id="exampleInputEmail1" placeholder="01S213BU"
-                                               aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword1" class="form-label fs-7 fw-bold text-black">Passport</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               placeholder="AA3344566" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword2" class="form-label fs-7 fw-bold text-black">Type</label>
-                                        <select class="form-select" id="exampleInputPassword2"
-                                                aria-label="Default select example">
-                                            <option selected>Select</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <div class="d-flex align-items-end h-100">
-                                            <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
-                                 aria-labelledby="profile-tab"
-                                 tabindex="0">
-                                <form class="row justify-content-center row-gap-3" action="" method="post">
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputEmail2" class="form-label fs-7 fw-bold text-black">Car
-                                            number</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               id="exampleInputEmail2" placeholder="01S213BU"
-                                               aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword3" class="form-label fs-7 fw-bold text-black">Passport</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               placeholder="AA3344566" id="exampleInputPassword3">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword4"
-                                               class="form-label fs-7 fw-bold text-black">Type</label>
-                                        <select class="form-select" id="exampleInputPassword4"
-                                                aria-label="Default select example">
-                                            <option selected>Select</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <div class="d-flex align-items-end h-100">
-                                            <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
-                                 aria-labelledby="contact-tab"
-                                 tabindex="0">
-                                <form class="row justify-content-center row-gap-3" action="" method="post">
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputEmail3" class="form-label fs-7 fw-bold text-black">Car
-                                            number</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               id="exampleInputEmail3" placeholder="01S213BU"
-                                               aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword5" class="form-label fs-7 fw-bold text-black">Passport</label>
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                               placeholder="AA3344566" id="exampleInputPassword5">
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <label for="exampleInputPassword6" class="form-label fs-7 fw-bold text-black">Type</label>
-                                        <select class="form-select" id="exampleInputPassword6"
-                                                aria-label="Default select example">
-                                            <option selected>Select</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-md-3 col-sm-4">
-                                        <div class="d-flex align-items-end h-100">
-                                            <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4 row-gap-3">
-                        <div class="col-12 col-lg-6">
-                            <div class="d-flex flex-column flex-sm-row row-gap-2 align-items-center justify-content-between bg-white primary-shadow rounded-3 py-3 px-4">
-                                <div class="calculator-w d-flex align-items-center justify-content-center">
-                                    <img class="w-100" src="assets/images/ingo-logo.png" alt="Logo">
-                                </div>
-                                <p class="fs-6 fw-bold text-black text-center text-sm-end ms-lg-5 ms-sm-4 ms-0">UZS
-                                    168,000</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="d-flex flex-column flex-sm-row row-gap-2 align-items-center justify-content-between bg-white primary-shadow rounded-3 py-3 px-4">
-                                <div class="calculator-w d-flex align-items-center justify-content-center">
-                                    <img class="w-100" src="assets/images/kapital-logo.png" alt="Logo">
-                                </div>
-                                <p class="fs-6 fw-bold text-black text-center text-sm-end ms-lg-5 ms-sm-4 ms-0">UZS
-                                    168,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="d-flex flex-column align-items-center w-100">
+                <h4 class="text-black fw-bold fs-3 text-center">Калькулятор</h4>
+                <div class="mt-md-5 mt-4 d-flex flex-column align-items-center">
+                    <ul class="nav nav-tabs column-gap-2 border-none" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link d-flex align-items-center primary-radius active" id="kasko-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#kasko-tab-pane" type="button" role="tab"
+                                    aria-controls="kasko-tab-pane" aria-selected="true">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.66667 16.6667C2.66667 17.1087 2.84226 17.5326 3.15482 17.8452C3.46738 18.1577 3.89131 18.3333 4.33333 18.3333C4.77536 18.3333 5.19928 18.1577 5.51184 17.8452C5.8244 17.5326 6 17.1087 6 16.6667M2.66667 16.6667C2.66667 16.2246 2.84226 15.8007 3.15482 15.4881C3.46738 15.1756 3.89131 15 4.33333 15C4.77536 15 5.19928 15.1756 5.51184 15.4881C5.8244 15.8007 6 16.2246 6 16.6667M2.66667 16.6667H1V11.6667M6 16.6667H11M11 16.6667C11 17.1087 11.1756 17.5326 11.4882 17.8452C11.8007 18.1577 12.2246 18.3333 12.6667 18.3333C13.1087 18.3333 13.5326 18.1577 13.8452 17.8452C14.1577 17.5326 14.3333 17.1087 14.3333 16.6667M11 16.6667C11 16.2246 11.1756 15.8007 11.4882 15.4881C11.8007 15.1756 12.2246 15 12.6667 15C13.1087 15 13.5326 15.1756 13.8452 15.4881C14.1577 15.8007 14.3333 16.2246 14.3333 16.6667M14.3333 16.6667H16V13.3333C16 12.8913 15.8244 12.4674 15.5118 12.1548C15.1993 11.8423 14.7754 11.6667 14.3333 11.6667H13.5M1 11.6667L2.66667 7.49999H10.1667L13.5 11.6667M1 11.6667H13.5M8.5 11.6667V7.49999M1 4.99999L8.5 1.66666L16 4.99999"/>
+                                </svg>
+                                <span class="d-none d-sm-block text-black fw-semibold">KACKO</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link d-flex align-items-center primary-radius" id="osago-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#osago-tab-pane" type="button" role="tab"
+                                    aria-controls="osago-tab-pane" aria-selected="false">
+                                <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.66667 10.1667C2.66667 10.6087 2.84226 11.0326 3.15482 11.3452C3.46738 11.6577 3.89131 11.8333 4.33333 11.8333C4.77536 11.8333 5.19928 11.6577 5.51184 11.3452C5.8244 11.0326 6 10.6087 6 10.1667M2.66667 10.1667C2.66667 9.72464 2.84226 9.30072 3.15482 8.98816C3.46738 8.67559 3.89131 8.5 4.33333 8.5C4.77536 8.5 5.19928 8.67559 5.51184 8.98816C5.8244 9.30072 6 9.72464 6 10.1667M2.66667 10.1667H1V5.16667M6 10.1667H11M11 10.1667C11 10.6087 11.1756 11.0326 11.4882 11.3452C11.8007 11.6577 12.2246 11.8333 12.6667 11.8333C13.1087 11.8333 13.5326 11.6577 13.8452 11.3452C14.1577 11.0326 14.3333 10.6087 14.3333 10.1667M11 10.1667C11 9.72464 11.1756 9.30072 11.4882 8.98816C11.8007 8.67559 12.2246 8.5 12.6667 8.5C13.1087 8.5 13.5326 8.67559 13.8452 8.98816C14.1577 9.30072 14.3333 9.72464 14.3333 10.1667M14.3333 10.1667H16V6.83333C16 6.39131 15.8244 5.96738 15.5118 5.65482C15.1993 5.34226 14.7754 5.16667 14.3333 5.16667H13.5M1 5.16667L2.66667 1H10.1667L13.5 5.16667M1 5.16667H13.5M8.5 5.16667V1"/>
+                                </svg>
+                                <span class="d-none d-sm-block text-black fw-semibold">ОСАГО</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link d-flex align-items-center primary-radius" id="travel-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#travel-tab-pane" type="button" role="tab"
+                                    aria-controls="travel-tab-pane" aria-selected="false">
+                                <svg width="17" height="18" viewBox="0 0 17 18" fill=""
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5833 4.41666L13.0833 1.99999C13.4038 1.67952 13.8385 1.49948 14.2917 1.49948C14.7449 1.49948 15.1795 1.67952 15.5 1.99999C15.8205 2.32046 16.0005 2.75511 16.0005 3.20832C16.0005 3.66154 15.8205 4.09619 15.5 4.41666L13.0833 6.91666L15.1667 13.1667L13.0833 15.2917L10.1667 9.83332L7.66667 12.3333V14.8333L6 16.5L4.75 12.75L1 11.5L2.66667 9.83332H5.16667L7.66667 7.33332L2.25 4.41666L4.33333 2.33332L10.5833 4.41666Z"
+                                    />
+                                </svg>
+                                <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link d-flex align-items-center primary-radius" id="others-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#others-tab-pane" type="button" role="tab"
+                                    aria-controls="others-tab-pane" aria-selected="false">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.6667 14.1667V15.8333C14.6667 16.2754 14.4911 16.6993 14.1785 17.0118C13.866 17.3244 13.442 17.5 13 17.5H4.66667C4.22464 17.5 3.80072 17.3244 3.48816 17.0118C3.17559 16.6993 3 16.2754 3 15.8333V7.5C3 7.05797 3.17559 6.63405 3.48816 6.32149C3.80072 6.00893 4.22464 5.83333 4.66667 5.83333H6.33333M6.33333 4.16667C6.33333 3.72464 6.50893 3.30072 6.82149 2.98816C7.13405 2.67559 7.55797 2.5 8 2.5H16.3333C16.7754 2.5 17.1993 2.67559 17.5118 2.98816C17.8244 3.30072 18 3.72464 18 4.16667V12.5C18 12.942 17.8244 13.366 17.5118 13.6785C17.1993 13.9911 16.7754 14.1667 16.3333 14.1667H8C7.55797 14.1667 7.13405 13.9911 6.82149 13.6785C6.50893 13.366 6.33333 12.942 6.33333 12.5V4.16667Z"
+                                          stroke="#737373" stroke-width="1.8" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                                <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-4" id="myTabContent">
+                        <div class="tab-pane fade show active" id="kasko-tab-pane" role="tabpanel"
+                             aria-labelledby="home-tab" tabindex="0">
 
-    <!--==================== LITRO APP | Omonjon ====================-->
-    <section class="litro-app py-5 mt-lg-5 mt-md-4 mt-0">
-        <div class="container">
-            <div class="row row-gap-5">
-                <div class="col-12 col-xl-5 col-lg-6">
-                    <div class="d-flex flex-column justify-content-center h-100">
-                        <h4 class="text-center text-lg-start text-secondary display-5 fw-bold">Explore Opportunities
-                            with Litro App</h4>
-                        <p class="text-center text-lg-start fs-7 text-secondary fw-normal mt-4 pb-5 border-bottom border-1">
-                            In blandit luctus proin mauris a commodo, dolor diam tempus, aenean magna fusce eu.
-                            Id porttitor aliquam eget aliquet sagittis eu aut diam ut phasellus sed convallis iaculis
-                            neque ultricies convallis sed enim.</p>
-                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between mt-5 row-gap-3">
-                            <div class="d-flex flex-column row-gap-1">
-                                <h5 class="text-secondary text-center text-sm-start fw-bold display-3">23%</h5>
-                                <p class="text-secondary text-center text-sm-start fw-normal fs-7">Nulla venenatis
-                                    everys</p>
-                            </div>
-                            <div class="d-flex flex-column row-gap-1">
-                                <h5 class="text-secondary text-center text-sm-start fw-bold display-3">132b</h5>
-                                <p class="text-secondary text-center text-sm-start fw-normal fs-7">Dictum in marko
-                                    elementum</p>
-                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 d-none d-xl-block"></div>
-                <div class="col-12 col-xl-5 col-lg-6">
-                    <div class="d-flex">
-                        <img src="assets/images/litro-app.png" alt="Picture" class="w-100">
+                        <div class="tab-pane fade" id="osago-tab-pane" role="tabpanel"
+                             aria-labelledby="profile-tab"
+                             tabindex="0">
+                            <form class="row justify-content-center row-gap-3" action="" method="post">
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputEmail2" class="form-label fs-7 fw-bold text-black">Car
+                                        number</label>
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                           id="exampleInputEmail2" placeholder="01S213BU"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputPassword3" class="form-label fs-7 fw-bold text-black">Passport</label>
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                           placeholder="AA3344566" id="exampleInputPassword3">
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputPassword4"
+                                           class="form-label fs-7 fw-bold text-black">Type</label>
+                                    <select class="form-select" id="exampleInputPassword4"
+                                            aria-label="Default select example">
+                                        <option selected>Select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <div class="d-flex align-items-end h-100">
+                                        <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel"
+                             aria-labelledby="contact-tab"
+                             tabindex="0">
+                            <form class="row justify-content-center row-gap-3" action="" method="post">
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputEmail3" class="form-label fs-7 fw-bold text-black">Car
+                                        number</label>
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                           id="exampleInputEmail3" placeholder="01S213BU"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputPassword5" class="form-label fs-7 fw-bold text-black">Passport</label>
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                           placeholder="AA3344566" id="exampleInputPassword5">
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <label for="exampleInputPassword6"
+                                           class="form-label fs-7 fw-bold text-black">Type</label>
+                                    <select class="form-select" id="exampleInputPassword6"
+                                            aria-label="Default select example">
+                                        <option selected>Select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3 col-sm-4">
+                                    <div class="d-flex align-items-end h-100">
+                                        <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="others-tab-pane" role="tabpanel"
+                             aria-labelledby="contact-tab"
+                             tabindex="0">
+                        </div>
                     </div>
                 </div>
             </div>
