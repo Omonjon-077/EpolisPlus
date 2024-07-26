@@ -822,7 +822,7 @@ progress {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1200px
+        max-width: 1128px
     }
 }
 
@@ -834,7 +834,7 @@ progress {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1340px
+        max-width: 1128px
     }
 }
 

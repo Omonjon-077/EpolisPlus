@@ -1,7 +1,12 @@
 /* ============ only desktop view for dropdown menus | Omonjon ============ */
+@media (min-width: 1400px) {
+    .header .container-self {
+        max-width: 1440px !important;
+    }
+}
 @media all and (max-width: 1399px) {
     .header .swiper-button-prev {
-        left: 93% !important;
+        left: 92.7% !important;
     }
 }
 
@@ -29,7 +34,7 @@
     }
 
     .header .swiper-button-prev {
-        left: 84.5% !important;
+        left: 84% !important;
     }
 
     .offcanvas.offcanvas-top {

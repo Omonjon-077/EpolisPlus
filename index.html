@@ -99,8 +99,9 @@
 
 <!--==================== HEADER | Omonjon ====================-->
 <header class="header position-relative">
-    <nav class="py-3 position-absolute top-0 end-0 start-0" id="myHeader">
-        <div class="container-fluid px-3 px-lg-4 px-xl-5">
+    <img src="./assets/images/header-pattern.png" class="position-absolute z-index-1 start-0 top-0" alt="">
+    <nav class="py-3 z-index-4 position-absolute top-0 end-0 start-0" id="myHeader">
+        <div class="container container-self">
             <div class="d-flex align-items-center justify-content-between">
                 <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="#!"><img
                         alt="LOGO"
@@ -169,7 +170,7 @@
             </div>
         </div>
     </nav>
-    <div class="container pt-5">
+    <div class="container position-relative z-index-3 pt-5">
         <div class="swiper position-relative mt-5 introSwiper">
             <div class="swiper-wrapper mt-3 mt-md-5">
                 <div class="swiper-slide">
@@ -276,9 +277,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="d-flex align-items-center justify-content-center my-4 my-md-5">
-        <img src="./assets/images/section-line.png" alt="">
+        <div class="d-flex align-items-center justify-content-center my-4 my-md-5">
+            <img class="w-100" src="./assets/images/section-line.png" alt="">
+        </div>
     </div>
 </header>
 
@@ -287,147 +288,419 @@
     <!--==================== CALCULATOR | Omonjon ====================-->
     <section class="calculator-section py-5">
         <div class="container">
-            <div class="d-flex flex-column align-items-center w-100">
-                <h4 class="text-black fw-bold fs-3 text-center">Калькулятор</h4>
-                <div class="mt-md-5 mt-4 d-flex flex-column align-items-center">
-                    <ul class="nav nav-tabs column-gap-2 border-none" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link d-flex align-items-center primary-radius active" id="kasko-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#kasko-tab-pane" type="button" role="tab"
-                                    aria-controls="kasko-tab-pane" aria-selected="true">
-                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.66667 16.6667C2.66667 17.1087 2.84226 17.5326 3.15482 17.8452C3.46738 18.1577 3.89131 18.3333 4.33333 18.3333C4.77536 18.3333 5.19928 18.1577 5.51184 17.8452C5.8244 17.5326 6 17.1087 6 16.6667M2.66667 16.6667C2.66667 16.2246 2.84226 15.8007 3.15482 15.4881C3.46738 15.1756 3.89131 15 4.33333 15C4.77536 15 5.19928 15.1756 5.51184 15.4881C5.8244 15.8007 6 16.2246 6 16.6667M2.66667 16.6667H1V11.6667M6 16.6667H11M11 16.6667C11 17.1087 11.1756 17.5326 11.4882 17.8452C11.8007 18.1577 12.2246 18.3333 12.6667 18.3333C13.1087 18.3333 13.5326 18.1577 13.8452 17.8452C14.1577 17.5326 14.3333 17.1087 14.3333 16.6667M11 16.6667C11 16.2246 11.1756 15.8007 11.4882 15.4881C11.8007 15.1756 12.2246 15 12.6667 15C13.1087 15 13.5326 15.1756 13.8452 15.4881C14.1577 15.8007 14.3333 16.2246 14.3333 16.6667M14.3333 16.6667H16V13.3333C16 12.8913 15.8244 12.4674 15.5118 12.1548C15.1993 11.8423 14.7754 11.6667 14.3333 11.6667H13.5M1 11.6667L2.66667 7.49999H10.1667L13.5 11.6667M1 11.6667H13.5M8.5 11.6667V7.49999M1 4.99999L8.5 1.66666L16 4.99999"/>
-                                </svg>
-                                <span class="d-none d-sm-block text-black fw-semibold">KACKO</span>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link d-flex align-items-center primary-radius" id="osago-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#osago-tab-pane" type="button" role="tab"
-                                    aria-controls="osago-tab-pane" aria-selected="false">
-                                <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.66667 10.1667C2.66667 10.6087 2.84226 11.0326 3.15482 11.3452C3.46738 11.6577 3.89131 11.8333 4.33333 11.8333C4.77536 11.8333 5.19928 11.6577 5.51184 11.3452C5.8244 11.0326 6 10.6087 6 10.1667M2.66667 10.1667C2.66667 9.72464 2.84226 9.30072 3.15482 8.98816C3.46738 8.67559 3.89131 8.5 4.33333 8.5C4.77536 8.5 5.19928 8.67559 5.51184 8.98816C5.8244 9.30072 6 9.72464 6 10.1667M2.66667 10.1667H1V5.16667M6 10.1667H11M11 10.1667C11 10.6087 11.1756 11.0326 11.4882 11.3452C11.8007 11.6577 12.2246 11.8333 12.6667 11.8333C13.1087 11.8333 13.5326 11.6577 13.8452 11.3452C14.1577 11.0326 14.3333 10.6087 14.3333 10.1667M11 10.1667C11 9.72464 11.1756 9.30072 11.4882 8.98816C11.8007 8.67559 12.2246 8.5 12.6667 8.5C13.1087 8.5 13.5326 8.67559 13.8452 8.98816C14.1577 9.30072 14.3333 9.72464 14.3333 10.1667M14.3333 10.1667H16V6.83333C16 6.39131 15.8244 5.96738 15.5118 5.65482C15.1993 5.34226 14.7754 5.16667 14.3333 5.16667H13.5M1 5.16667L2.66667 1H10.1667L13.5 5.16667M1 5.16667H13.5M8.5 5.16667V1"/>
-                                </svg>
-                                <span class="d-none d-sm-block text-black fw-semibold">ОСАГО</span>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link d-flex align-items-center primary-radius" id="travel-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#travel-tab-pane" type="button" role="tab"
-                                    aria-controls="travel-tab-pane" aria-selected="false">
-                                <svg width="17" height="18" viewBox="0 0 17 18" fill=""
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.5833 4.41666L13.0833 1.99999C13.4038 1.67952 13.8385 1.49948 14.2917 1.49948C14.7449 1.49948 15.1795 1.67952 15.5 1.99999C15.8205 2.32046 16.0005 2.75511 16.0005 3.20832C16.0005 3.66154 15.8205 4.09619 15.5 4.41666L13.0833 6.91666L15.1667 13.1667L13.0833 15.2917L10.1667 9.83332L7.66667 12.3333V14.8333L6 16.5L4.75 12.75L1 11.5L2.66667 9.83332H5.16667L7.66667 7.33332L2.25 4.41666L4.33333 2.33332L10.5833 4.41666Z"
-                                    />
-                                </svg>
-                                <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link d-flex align-items-center primary-radius" id="others-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#others-tab-pane" type="button" role="tab"
-                                    aria-controls="others-tab-pane" aria-selected="false">
-                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.6667 14.1667V15.8333C14.6667 16.2754 14.4911 16.6993 14.1785 17.0118C13.866 17.3244 13.442 17.5 13 17.5H4.66667C4.22464 17.5 3.80072 17.3244 3.48816 17.0118C3.17559 16.6993 3 16.2754 3 15.8333V7.5C3 7.05797 3.17559 6.63405 3.48816 6.32149C3.80072 6.00893 4.22464 5.83333 4.66667 5.83333H6.33333M6.33333 4.16667C6.33333 3.72464 6.50893 3.30072 6.82149 2.98816C7.13405 2.67559 7.55797 2.5 8 2.5H16.3333C16.7754 2.5 17.1993 2.67559 17.5118 2.98816C17.8244 3.30072 18 3.72464 18 4.16667V12.5C18 12.942 17.8244 13.366 17.5118 13.6785C17.1993 13.9911 16.7754 14.1667 16.3333 14.1667H8C7.55797 14.1667 7.13405 13.9911 6.82149 13.6785C6.50893 13.366 6.33333 12.942 6.33333 12.5V4.16667Z"
-                                          stroke="#737373" stroke-width="1.8" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                                <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-4" id="myTabContent">
-                        <div class="tab-pane fade show active" id="kasko-tab-pane" role="tabpanel"
-                             aria-labelledby="home-tab" tabindex="0">
+            <h4 class="text-black fw-bold fs-3 text-center mb-4">Калькулятор</h4>
+            <div class="d-flex align-items-center justify-content-center">
+                <ul class="nav nav-tabs gap-2 border-none justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center primary-radius active" id="kasko-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#kasko-tab-pane" type="button" role="tab"
+                                aria-controls="kasko-tab-pane" aria-selected="true">
+                            <svg width="20" height="20" viewBox="0 0 17 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66667 16.6667C2.66667 17.1087 2.84226 17.5326 3.15482 17.8452C3.46738 18.1577 3.89131 18.3333 4.33333 18.3333C4.77536 18.3333 5.19928 18.1577 5.51184 17.8452C5.8244 17.5326 6 17.1087 6 16.6667M2.66667 16.6667C2.66667 16.2246 2.84226 15.8007 3.15482 15.4881C3.46738 15.1756 3.89131 15 4.33333 15C4.77536 15 5.19928 15.1756 5.51184 15.4881C5.8244 15.8007 6 16.2246 6 16.6667M2.66667 16.6667H1V11.6667M6 16.6667H11M11 16.6667C11 17.1087 11.1756 17.5326 11.4882 17.8452C11.8007 18.1577 12.2246 18.3333 12.6667 18.3333C13.1087 18.3333 13.5326 18.1577 13.8452 17.8452C14.1577 17.5326 14.3333 17.1087 14.3333 16.6667M11 16.6667C11 16.2246 11.1756 15.8007 11.4882 15.4881C11.8007 15.1756 12.2246 15 12.6667 15C13.1087 15 13.5326 15.1756 13.8452 15.4881C14.1577 15.8007 14.3333 16.2246 14.3333 16.6667M14.3333 16.6667H16V13.3333C16 12.8913 15.8244 12.4674 15.5118 12.1548C15.1993 11.8423 14.7754 11.6667 14.3333 11.6667H13.5M1 11.6667L2.66667 7.49999H10.1667L13.5 11.6667M1 11.6667H13.5M8.5 11.6667V7.49999M1 4.99999L8.5 1.66666L16 4.99999"/>
+                            </svg>
+                            <span class="d-none d-sm-block text-black fw-semibold">KACKO</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center primary-radius" id="osago-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#osago-tab-pane" type="button" role="tab"
+                                aria-controls="osago-tab-pane" aria-selected="false">
+                            <svg width="20" height="20" viewBox="0 0 17 13" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66667 10.1667C2.66667 10.6087 2.84226 11.0326 3.15482 11.3452C3.46738 11.6577 3.89131 11.8333 4.33333 11.8333C4.77536 11.8333 5.19928 11.6577 5.51184 11.3452C5.8244 11.0326 6 10.6087 6 10.1667M2.66667 10.1667C2.66667 9.72464 2.84226 9.30072 3.15482 8.98816C3.46738 8.67559 3.89131 8.5 4.33333 8.5C4.77536 8.5 5.19928 8.67559 5.51184 8.98816C5.8244 9.30072 6 9.72464 6 10.1667M2.66667 10.1667H1V5.16667M6 10.1667H11M11 10.1667C11 10.6087 11.1756 11.0326 11.4882 11.3452C11.8007 11.6577 12.2246 11.8333 12.6667 11.8333C13.1087 11.8333 13.5326 11.6577 13.8452 11.3452C14.1577 11.0326 14.3333 10.6087 14.3333 10.1667M11 10.1667C11 9.72464 11.1756 9.30072 11.4882 8.98816C11.8007 8.67559 12.2246 8.5 12.6667 8.5C13.1087 8.5 13.5326 8.67559 13.8452 8.98816C14.1577 9.30072 14.3333 9.72464 14.3333 10.1667M14.3333 10.1667H16V6.83333C16 6.39131 15.8244 5.96738 15.5118 5.65482C15.1993 5.34226 14.7754 5.16667 14.3333 5.16667H13.5M1 5.16667L2.66667 1H10.1667L13.5 5.16667M1 5.16667H13.5M8.5 5.16667V1"/>
+                            </svg>
+                            <span class="d-none d-sm-block text-black fw-semibold">ОСАГО</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center primary-radius" id="travel-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#travel-tab-pane" type="button" role="tab"
+                                aria-controls="travel-tab-pane" aria-selected="false">
+                            <svg width="20" height="20" viewBox="0 0 17 18" fill=""
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5833 4.41666L13.0833 1.99999C13.4038 1.67952 13.8385 1.49948 14.2917 1.49948C14.7449 1.49948 15.1795 1.67952 15.5 1.99999C15.8205 2.32046 16.0005 2.75511 16.0005 3.20832C16.0005 3.66154 15.8205 4.09619 15.5 4.41666L13.0833 6.91666L15.1667 13.1667L13.0833 15.2917L10.1667 9.83332L7.66667 12.3333V14.8333L6 16.5L4.75 12.75L1 11.5L2.66667 9.83332H5.16667L7.66667 7.33332L2.25 4.41666L4.33333 2.33332L10.5833 4.41666Z"
+                                />
+                            </svg>
+                            <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center primary-radius" id="others-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#others-tab-pane" type="button" role="tab"
+                                aria-controls="others-tab-pane" aria-selected="false">
+                            <svg width="20" height="20" viewBox="0 0 21 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6667 14.1667V15.8333C14.6667 16.2754 14.4911 16.6993 14.1785 17.0118C13.866 17.3244 13.442 17.5 13 17.5H4.66667C4.22464 17.5 3.80072 17.3244 3.48816 17.0118C3.17559 16.6993 3 16.2754 3 15.8333V7.5C3 7.05797 3.17559 6.63405 3.48816 6.32149C3.80072 6.00893 4.22464 5.83333 4.66667 5.83333H6.33333M6.33333 4.16667C6.33333 3.72464 6.50893 3.30072 6.82149 2.98816C7.13405 2.67559 7.55797 2.5 8 2.5H16.3333C16.7754 2.5 17.1993 2.67559 17.5118 2.98816C17.8244 3.30072 18 3.72464 18 4.16667V12.5C18 12.942 17.8244 13.366 17.5118 13.6785C17.1993 13.9911 16.7754 14.1667 16.3333 14.1667H8C7.55797 14.1667 7.13405 13.9911 6.82149 13.6785C6.50893 13.366 6.33333 12.942 6.33333 12.5V4.16667Z"
+                                      stroke="#737373" stroke-width="1.8" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                            <span class="d-none d-sm-block text-black fw-semibold">Путешествие</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-4" id="myTabContent">
+                <div class="tab-pane fade show active" id="kasko-tab-pane" role="tabpanel"
+                     aria-labelledby="home-tab" tabindex="0">
+                    <div class="d-flex justify-content-start align-items-start column-gap-3 overflow-x-scroll">
+                        <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
+                            <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
+                                <div class="">
+                                    <img src="assets/images/simple-icon.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <h5 class="fs-8 text-light-emphasis">Тариф</h5>
+                                    <h4 class="text-black fw-semibold fs-5">Simple</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column border-bottom-dashed py-3">
+                                <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
+                                <h4 class="fw-semibold fs-4 text-secondary mb-3">3 000 000</h4>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/evacuation.svg" alt="">ЭВАКУАЦИЯ
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                                <h6 class="fs-7 text-black d-flex align-items-center column-gap-2"><img
+                                        src="./assets/images/svg/legal.svg " alt="">Юридическая
+                                    консультация
+                                </h6>
+                            </div>
+                            <div class="d-flex flex-column pt-3 w-100">
+                                <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
+                                    <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                                <div class="d-flex align-items-center column-gap-2">
+                                    <a class="btn-white primary-radius py-2 px-4 w-50" href="#">Подробнее</a>
+                                    <a class="btn btn-primary primary-radius py-2 px-4 w-50" href="#">Оформить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
+                            <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
+                                <div class="">
+                                    <img src="assets/images/simple-icon.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <h5 class="fs-8 text-light-emphasis">Тариф</h5>
+                                    <h4 class="text-black fw-semibold fs-5">Standard</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column border-bottom-dashed py-3">
+                                <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
+                                <h4 class="fw-semibold fs-4 text-secondary mb-3">12 000 000</h4>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/umbrella.svg" alt="">ДСАГО</h6><h6
+                                    class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                <img
+                                        src="./assets/images/svg/truck-delivery.svg" alt="">ЭВАКУАЦИЯ
+                            </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/question.svg" alt="">Страховой
+                                    помощник</h6>
+                                <h6 class="fs-7 text-black d-flex align-items-center column-gap-2"><img
+                                        src="./assets/images/svg/legal.svg " alt="">Юридическая
+                                    консультация
+                                </h6>
+                            </div>
+                            <div class="d-flex flex-column pt-3 w-100">
+                                <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
+                                    <img src="./assets/images/svg/coin.svg" alt="">250 000 сум</p>
+                                <div class="d-flex align-items-center column-gap-2">
+                                    <a class="btn-white primary-radius py-2 px-4 w-50" href="#">Подробнее</a>
+                                    <a class="btn btn-primary primary-radius py-2 px-4 w-50" href="#">Оформить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
 
+                            <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
+                                <div class="">
+                                    <img src="assets/images/simple-icon.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <h5 class="fs-8 text-light-emphasis">Тариф</h5>
+                                    <h4 class="text-black fw-semibold fs-5">Silver</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column border-bottom-dashed py-3">
+                                <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
+                                <h4 class="fw-semibold fs-4 text-secondary mb-3">70 000 000</h4>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/car-garage.svg" alt="">АВТОКАСКО
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/umbrella.svg" alt="">ДСАГО</h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/flame.svg" alt="">Страхование от
+                                    несчастных случаев</h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/truck-delivery.svg" alt="">ЭВАКУАЦИЯ
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/question.svg" alt="">Страховой
+                                    помощник</h6>
+                                <h6 class="fs-7 text-black d-flex align-items-center column-gap-2"><img
+                                        src="./assets/images/svg/legal.svg " alt="">Юридическая
+                                    консультация
+                                </h6>
+                            </div>
+                            <div class="d-flex flex-column pt-3 w-100">
+                                <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
+                                    <img src="./assets/images/svg/coin.svg" alt="">400 000 сум</p>
+                                <div class="d-flex align-items-center column-gap-2">
+                                    <a class="btn-white primary-radius py-2 px-4 w-50" href="#">Подробнее</a>
+                                    <a class="btn btn-primary primary-radius py-2 px-4 w-50" href="#">Оформить</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="osago-tab-pane" role="tabpanel"
-                             aria-labelledby="profile-tab"
-                             tabindex="0">
-                            <form class="row justify-content-center row-gap-3" action="" method="post">
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputEmail2" class="form-label fs-7 fw-bold text-black">Car
-                                        number</label>
-                                    <input required type="text" autocomplete="off" class="form-control"
-                                           id="exampleInputEmail2" placeholder="01S213BU"
-                                           aria-describedby="emailHelp">
+                        <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
+                            <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
+                                <div class="">
+                                    <img src="assets/images/simple-icon.png" alt="">
                                 </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputPassword3" class="form-label fs-7 fw-bold text-black">Passport</label>
-                                    <input required type="text" autocomplete="off" class="form-control"
-                                           placeholder="AA3344566" id="exampleInputPassword3">
+                                <div class="d-flex flex-column align-items-start">
+                                    <h5 class="fs-8 text-light-emphasis">Тариф</h5>
+                                    <h4 class="text-black fw-semibold fs-5">Gold</h4>
                                 </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputPassword4"
-                                           class="form-label fs-7 fw-bold text-black">Type</label>
-                                    <select class="form-select" id="exampleInputPassword4"
-                                            aria-label="Default select example">
-                                        <option selected>Select</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
+                            </div>
+                            <div class="d-flex flex-column border-bottom-dashed py-3">
+                                <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
+                                <h4 class="fw-semibold fs-4 text-secondary mb-3">110 000 000</h4>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/car-garage.svg" alt="">АВТОКАСКО
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/umbrella.svg" alt="">ДСАГО</h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/flame.svg" alt="">Страхование от
+                                    несчастных
+                                    случаев</h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/truck-delivery.svg" alt="">ЭВАКУАЦИЯ
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img
+                                            src="./assets/images/svg/question.svg" alt="">Страховой
+                                    помощник
+                                </h6>
+                                <h6 class="fs-7 text-black d-flex align-items-center column-gap-2"><img
+                                        src="./assets/images/svg/legal.svg " alt="">Юридическая
+                                    консультация
+                                </h6>
+                            </div>
+                            <div class="d-flex flex-column pt-3 w-100">
+                                <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
+                                    <img src="./assets/images/svg/coin.svg" alt="">800 000 сум</p>
+                                <div class="d-flex align-items-center column-gap-2">
+                                    <a class="btn-white primary-radius py-2 px-4 w-50"
+                                       href="#">Подробнее</a>
+                                    <a class="btn btn-primary primary-radius py-2 px-4 w-50" href="#">Оформить</a>
                                 </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <div class="d-flex align-items-end h-100">
-                                        <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel"
-                             aria-labelledby="contact-tab"
-                             tabindex="0">
-                            <form class="row justify-content-center row-gap-3" action="" method="post">
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputEmail3" class="form-label fs-7 fw-bold text-black">Car
-                                        number</label>
-                                    <input required type="text" autocomplete="off" class="form-control"
-                                           id="exampleInputEmail3" placeholder="01S213BU"
-                                           aria-describedby="emailHelp">
-                                </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputPassword5" class="form-label fs-7 fw-bold text-black">Passport</label>
-                                    <input required type="text" autocomplete="off" class="form-control"
-                                           placeholder="AA3344566" id="exampleInputPassword5">
-                                </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <label for="exampleInputPassword6"
-                                           class="form-label fs-7 fw-bold text-black">Type</label>
-                                    <select class="form-select" id="exampleInputPassword6"
-                                            aria-label="Default select example">
-                                        <option selected>Select</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-3 col-sm-4">
-                                    <div class="d-flex align-items-end h-100">
-                                        <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="osago-tab-pane" role="tabpanel"
+                     aria-labelledby="profile-tab"
+                     tabindex="0">
+                    <form class="row justify-content-center row-gap-3" action="" method="post">
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputEmail2" class="form-label fs-7 fw-bold text-black">Car
+                                number</label>
+                            <input required type="text" autocomplete="off" class="form-control"
+                                   id="exampleInputEmail2" placeholder="01S213BU"
+                                   aria-describedby="emailHelp">
                         </div>
-                        <div class="tab-pane fade" id="others-tab-pane" role="tabpanel"
-                             aria-labelledby="contact-tab"
-                             tabindex="0">
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputPassword3"
+                                   class="form-label fs-7 fw-bold text-black">Passport</label>
+                            <input required type="text" autocomplete="off" class="form-control"
+                                   placeholder="AA3344566" id="exampleInputPassword3">
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputPassword4"
+                                   class="form-label fs-7 fw-bold text-black">Type</label>
+                            <select class="form-select" id="exampleInputPassword4"
+                                    aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <div class="d-flex align-items-end h-100">
+                                <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel"
+                     aria-labelledby="contact-tab"
+                     tabindex="0">
+                    <form class="row justify-content-center row-gap-3" action="" method="post">
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputEmail3" class="form-label fs-7 fw-bold text-black">Car
+                                number</label>
+                            <input required type="text" autocomplete="off" class="form-control"
+                                   id="exampleInputEmail3" placeholder="01S213BU"
+                                   aria-describedby="emailHelp">
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputPassword5"
+                                   class="form-label fs-7 fw-bold text-black">Passport</label>
+                            <input required type="text" autocomplete="off" class="form-control"
+                                   placeholder="AA3344566" id="exampleInputPassword5">
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <label for="exampleInputPassword6"
+                                   class="form-label fs-7 fw-bold text-black">Type</label>
+                            <select class="form-select" id="exampleInputPassword6"
+                                    aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-4">
+                            <div class="d-flex align-items-end h-100">
+                                <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="others-tab-pane" role="tabpanel"
+                     aria-labelledby="contact-tab"
+                     tabindex="0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== APP | Omonjon ====================-->
+    <section class="app-section mt-lg-5 pt-5">
+        <div class="container">
+            <div class="d-flex overflow-hidden flex-column position-relative flex-sm-row row-gap-3 align-items-center justify-content-center primary-radius mx-auto pt-3 app-box pb-5 mb-lg-5">
+
+                <img src="./assets/images/pattern.png"
+                     class="position-absolute top-0 start-0 z-index-1 w-100 d-none d-sm-block" alt="">
+                <img src="./assets/images/app-phone.png" class="order-1 order-sm-0 position-relative z-index-2" alt="">
+                <div class="d-flex flex-column align-items-sm-start align-items-center position-relative z-index-2">
+                    <h6 class="fs-5 fw-semibold text-primary">Cкачай приложение</h6>
+                    <h5 class="text-black fw-semibold fs-5">Доступно для Android и iOS</h5>
+                    <div class="d-flex align-items-center column-gap-2 mt-3">
+                        <a href="#"><img src="./assets/images/app-store.png" alt=""></a>
+                        <a href="#"><img src="./assets/images/google-play.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center pb-4 mb-lg-5">
+                <img class="w-100" src="./assets/images/section-line.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--==================== APP | Omonjon ====================-->
+    <section class="about-section mb-lg-5 pb-4">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="d-flex column-gap-4">
+                        <div class="mt-5 d-none d-md-block">
+                            <img src="./assets/images/svg/about-favicon.svg" alt="">
+                        </div>
+                        <div class="d-flex flex-column align-items-sm-start align-items-center text-center text-sm-start">
+                            <h5 class="text-light-emphasis fs-5 fw-semibold mb-2">О нас</h5>
+                            <div class="fs-2 fw-semibold text-black line-h-initial mb-4">
+                                <span class="d-inline-flex">
+                                    <span class="text-primary">Epolis</span>
+                                    <span class="text-secondary">Plus</span>
+                                </span> - это команда, объединенная идеей сделать продажи
+                                страховых продуктов эффективнее
+                            </div>
+                            <div class="d-flex">
+                                <div class="me-3 d-none d-sm-block">
+                                    <img src="assets/images/svg/red-line.svg" alt="">
+                                </div>
+                                <div class="fs-6 text-black">Позволяет быстро запускать направления, генерирующие
+                                    дополнительный доход, и
+                                    заметно увеличивать рентабельность текущих.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-1 d-none d-xl-block"></div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="d-flex flex-column row-gap-4">
+                        <div class="d-flex column-gap-3">
+                                <img class="about-icons" src="./assets/images/shield-star.png" alt="">
+                            <div class="d-flex flex-column">
+                                <h5 class="fs-5 fw-semibold text-black">5 лет</h5>
+                                <div class="text-light-emphasis">мы развиваем иншуртех-решения в автоотрасли и
+                                    строительстве
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex column-gap-3">
+                                <img class="about-icons" src="./assets/images/shield-star.png" alt="">
+                            <div class="d-flex flex-column">
+                                <h5 class="fs-5 fw-semibold text-black">170+ наших сотрудников</h5>
+                                <div class="text-light-emphasis">делают свой вклад в развитие и внедрение информационных
+                                    технологий в страхование
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex column-gap-3">
+                                <img class="about-icons" src="./assets/images/paper.png" alt="">
+                            <div class="d-flex flex-column">
+                                <h5 class="fs-5 fw-semibold text-black">30 000+ полисов</h5>
+                                <div class="text-light-emphasis">ежемесячно оформляется через EpolisPlus</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </main>
 
 <!--================ FOOTER | Omonjon ================-->

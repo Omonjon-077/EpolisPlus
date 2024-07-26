@@ -6,8 +6,8 @@ window.addEventListener("load", function (eventObject) {
     $('.load').fadeOut("slow");
 });
 
-/*=============== HEADER FIXED ===============*/
-let swiper = new Swiper(".introSwiper", {
+/*=============== Intro Swiper ===============*/
+let swiperIntro = new Swiper(".introSwiper", {
     grabCursor: true,
     spaceBetween: 40,
     speed: 700,
@@ -26,6 +26,34 @@ let swiper = new Swiper(".introSwiper", {
     },
     keyboard: true,
 });
+
+/*=============== Calculator FIXED ===============*/
+let swiperCalculator = new Swiper(".calculatorSwiper", {
+    centeredSlides: true,
+    loop: false,
+    grabCursor: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slideToClickedSlide: true,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slideToClickedSlide: true,
+        },
+        // when window width is >= 640px
+        1400: {
+            slidesPerView: "4",
+            spaceBetween: 16,
+        }
+    }
+
+});
+
 /*=============== HEADER FIXED ===============*/
 if ($("#myHeader").length) {
     window.onscroll = function () {
