@@ -97,6 +97,10 @@ button[aria-expanded^="true"] i {
     color: black;
 }
 
+.border-end-dashed {
+    border-right: 1px dashed var(--bs-border-color);
+}
+
 .z-index-1 {
     z-index: 1;
 }
@@ -330,10 +334,10 @@ a {
     padding: 8px 10px;
 }
 
-.calculator-section .box-calc {
-    min-width: 380px;
-    max-width: 381px;
-}
+/*.calculator-section .swiper-slide {*/
+/*    min-width: 380px;*/
+/*    max-width: 381px;*/
+/*}*/
 
 .calculator-section ::-webkit-scrollbar {
     background-color: transparent;
@@ -352,6 +356,28 @@ a {
 .about-section .about-icons {
     width: 48px;
     height: 48px;
+}
+
+/*=============== PARTNERS SECTION | Omonjon ===============*/
+.partners-section .partners-box {
+    max-width: 744px;
+    width: 100%;
+}
+
+.partners-section .swiper-slide {
+    height: 48px;
+}
+
+/*=============== HOW WORK SECTION | Omonjon ===============*/
+.how-work .how-work-line {
+    top: 30px;
+    right: -90px;
+}
+
+
+/*=============== SCROLL BAR | Omonjon ===============*/
+.footer .btn-footer {
+    padding: 12px 20px;
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/

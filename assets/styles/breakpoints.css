@@ -4,6 +4,7 @@
         max-width: 1440px !important;
     }
 }
+
 @media all and (max-width: 1399px) {
     .header .swiper-button-prev {
         left: 92.7% !important;
@@ -18,6 +19,11 @@
 
     .header .swiper-button-prev {
         left: 91% !important;
+    }
+
+    .how-work .how-work-line {
+        width: 150px;
+        right: -75px;
     }
 }
 
@@ -40,11 +46,20 @@
     .offcanvas.offcanvas-top {
         height: 250px;
     }
+
+    .w-100Mb {
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
     .offcanvas.offcanvas-top {
         height: 350px;
+    }
+
+    .btn-footer {
+        border-radius: 50% !important;
+        padding: 14px !important;
     }
 }
 

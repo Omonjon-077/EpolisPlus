@@ -27,31 +27,58 @@ let swiperIntro = new Swiper(".introSwiper", {
     keyboard: true,
 });
 
-/*=============== Calculator FIXED ===============*/
+/*=============== Calculator Swiper ===============*/
 let swiperCalculator = new Swiper(".calculatorSwiper", {
-    centeredSlides: true,
+    centeredSlides: false,
     loop: false,
     grabCursor: true,
+    speed: 850,
+    autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        delay: 2500,
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 25,
+        },
+        // when window width is >= 1200px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        // when window width is >= 1400px
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        }
+    }
+});
+
+/*=============== PARTNERS SWIPER ===============*/
+let swiper = new Swiper(".partnersSwiper", {
+    centeredSlides: false,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        delay: 3000,
+    },
     breakpoints: {
         // when window width is >= 320px
         320: {
             slidesPerView: 1,
             spaceBetween: 0,
-            slideToClickedSlide: true,
         },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 1,
+        // when window width is >= 576px
+        576: {
+            slidesPerView: 2,
             spaceBetween: 0,
-            slideToClickedSlide: true,
-        },
-        // when window width is >= 640px
-        1400: {
-            slidesPerView: "4",
-            spaceBetween: 16,
         }
     }
-
 });
 
 /*=============== HEADER FIXED ===============*/
