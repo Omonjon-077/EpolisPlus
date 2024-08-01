@@ -79,6 +79,24 @@ button[aria-expanded^="true"] i {
     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
 }
 
+.hover-link:hover {
+    color: #737373 !important;
+}
+
+.btn-primary:hover {
+    background-color: #01B57F;
+    border-color: #01B57F;
+}
+
+.btn-secondary:hover {
+    background-color: #F03663;
+    border-color: #F03663;
+}
+
+.btn-white:hover {
+    background-color: #FAFAFA;
+}
+
 .text-gray {
     color: var(--bs-gray);
 }
@@ -99,6 +117,10 @@ button[aria-expanded^="true"] i {
 
 .border-end-dashed {
     border-right: 1px dashed var(--bs-border-color);
+}
+
+.border-start-dashed {
+    border-left: 1px dashed var(--bs-border-color);
 }
 
 .z-index-1 {
@@ -174,7 +196,7 @@ button[aria-expanded^="true"] i {
 }
 
 .transition {
-    transition: .4s;
+    transition: .3s !important;
 }
 
 .fs-title {
@@ -229,7 +251,7 @@ button {
 
 .form-control:focus,
 .form-select:focus {
-    box-shadow: 0 0 0 0.25rem var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -259,14 +281,22 @@ a {
     text-decoration: none;
 }
 
+/* ==================== MODALS | Omonjon ==================== */
+.modal-header .btn-close {
+    background: none;
+    opacity: 100 !important;
+    color: var(--bs-black);
+    margin: 0;
+}
+
+.btn-close:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);
+}
+
 /* ==================== HEADER | Omonjon ==================== */
 #myHeader {
     background-color: transparent;
 }
-
-/*.introSwiper.swiper {*/
-/*    height: 500px;*/
-/*}*/
 
 .header .dropdown-menu {
     min-width: auto;
@@ -330,17 +360,39 @@ a {
     stroke: var(--bs-primary);
 }
 
-.calculator-section .pay-amount {
+.pay-amount {
     padding: 8px 10px;
 }
 
-/*.calculator-section .swiper-slide {*/
-/*    min-width: 380px;*/
-/*    max-width: 381px;*/
-/*}*/
-
 .calculator-section ::-webkit-scrollbar {
     background-color: transparent;
+}
+
+.tech-pas {
+    position: relative;
+}
+
+.tech-pas label {
+    position: absolute;
+    left: 12px;
+    white-space: nowrap;
+}
+
+.tech-pas input {
+    margin-top: 30px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 4px 8px 0 #00000008;
+    border-radius: 12px;
+}
+
+.form-control::placeholder {
+    color: #A3A3A3;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 /*=============== APP SECTION | Omonjon ===============*/
@@ -359,12 +411,12 @@ a {
 }
 
 /*=============== PARTNERS SECTION | Omonjon ===============*/
-.partners-section .partners-box {
+.partners-box {
     max-width: 744px;
     width: 100%;
 }
 
-.partners-section .swiper-slide {
+.partners-box .swiper-slide {
     height: 48px;
 }
 

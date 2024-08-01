@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/styles/main.css?v=0.5">
-    <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.2">
+    <link rel="stylesheet" href="assets/styles/main.css?v=0.6">
+    <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.3">
 
     <title>EpolisPlus</title>
 </head>
@@ -97,77 +97,145 @@
     </div>
 </div>
 
+<!--================ KASKO MODAL | Omonjon ================-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+            <div class="modal-header border-0 border-bottom-dashed pb-3 px-0 pt-0">
+                <div class="d-flex align-items-center column-gap-2 w-100">
+                    <div class="">
+                        <img src="assets/images/simple-icon.png" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start">
+                        <h5 class="fs-8 text-light-emphasis">Тариф</h5>
+                        <h4 class="text-black fw-semibold fs-5">Simple</h4>
+                    </div>
+                </div>
+                <div class="d-flex flex-column text-end align-items-end w-100 me-4">
+                    <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
+                    <h4 class="text-secondary fs-4 fw-semibold">3 000 000</h4>
+                </div>
+                <button type="button"
+                        class="btn-close rounded-circle primary-shadow border-0 d-flex align-items-center bg-white justify-content-center mb-auto"
+                        data-bs-dismiss="modal" aria-label="Close">
+                    <i class='bx bx-x text-black fs-5'></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="row mt-3">
+                    <div class="col-7 border-end-dashed">
+                        <div class="d-flex flex-column align-items-start text-start row-gap-3">
+                            <h5 class="fs-8 text-light-emphasis">Страховое покрытие</h5>
+                            <div class="d-flex flex-column">
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2 fw-semibold">
+                                    <img src="./assets/images/svg/evacuation.svg" alt="">ЭВАКУАЦИЯ
+                                </h6>
+                                <div class="mt-1 text-black">
+                                    Организация эвакуации Вашего автомобиля 1 (один) раз в течение периода страхования
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2 fw-semibold">
+                                    <img src="./assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                                <div class="mt-1 text-black">
+                                    Организация замены поврежденного колеса Вашего автомобиля
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2 fw-semibold">
+                                    <img src="./assets/images/svg/legal.svg" alt="">Юридическая консультация
+                                </h6>
+                                <div class="mt-1 text-black">
+                                    Консультация по вопросам страхования в течение всего периода полиса
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="d-flex flex-column align-items-start w-100">
+                            <h5 class="fs-8 text-light-emphasis mb-1">Сумма оплаты</h5>
+                            <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount w-100">
+                                <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                               href="#">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--==================== HEADER | Omonjon ====================-->
 <header class="header position-relative">
     <img src="./assets/images/header-pattern.png" class="position-absolute z-index-1 start-0 top-0 w-100Mb" alt="">
     <nav class="py-3 z-index-4 position-absolute top-0 end-0 start-0" id="myHeader">
-        <div class="container container-self">
-            <div class="d-flex align-items-center justify-content-between">
-                <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="#!"><img
-                        alt="LOGO"
-                        src="assets/images/svg/site-logo.svg"></a>
-                <ul class="d-lg-flex d-none align-items-center column-gap-4 ms-0 ms-xl-4">
-                    <li class="nav-item">
-                        <a class="fw-semibold text-black"
-                           aria-current="page" href="#!">
-                            <img src="./assets/images/svg/shield.svg" alt="">
-                            Гарантийный код
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="fw-semibold text-black"
-                           aria-current="page" href="#!">
-                            <img src="./assets/images/svg/calculator.svg" alt="">
-                            Калькулятор полисов
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="fw-semibold text-black"
-                           aria-current="page" href="#!">
-                            <img src="./assets/images/svg/briefcase.svg" alt="">
-                            О компании
-                        </a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center column-gap-sm-3 column-gap-2 ms-auto">
-                    <div class="nav-item-top dropdown">
-                        <!-- Language -->
+        <div class="d-flex align-items-center justify-content-between px-4">
+            <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="#!"><img
+                    alt="LOGO"
+                    src="assets/images/svg/site-logo.svg"></a>
+            <ul class="d-lg-flex d-none align-items-center column-gap-4 ms-0 ms-xl-4">
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#!">
+                        <img src="./assets/images/svg/shield.svg" alt="">
+                        Гарантийный код
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#!">
+                        <img src="./assets/images/svg/calculator.svg" alt="">
+                        Калькулятор полисов
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#!">
+                        <img src="./assets/images/svg/briefcase.svg" alt="">
+                        О компании
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center column-gap-sm-3 column-gap-2 ms-auto">
+                <div class="nav-item-top dropdown">
+                    <!-- Language -->
 
-                        <a class="nav-link-sm d-flex align-items-center fs-8 fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
-                           href="#" id="navbarDropdownLangTwo" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            <img src="assets/images/ru-flag.png" alt=""> RU
-                        </a>
-                        <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
-                            style="min-width: auto">
-                            <li>
-                                <a class="ru fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
-                                   href="#"><img src="assets/images/en-flag.png" alt="">EN</a>
-                            </li>
-                            <li>
-                                <a class="en fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
-                                   href="#"><img src="assets/images/uz-flag.png" alt="">UZ</a>
-                            </li>
-                        </ul>
-                        <!-- End Language -->
-                    </div>
-                    <a href="#!"
-                       class="btn transition btn-secondary primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
-                        <img src="./assets/images/svg/phone.svg" alt="" class="">
-                        <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
+                    <a class="nav-link-sm d-flex align-items-center fs-8 fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                       href="#" id="navbarDropdownLangTwo" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="assets/images/ru-flag.png" alt=""> RU
                     </a>
-                    <a href="#!"
-                       class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn-white primary-radius py-2 px-3">
-                        <img src="./assets/images/svg/user.svg" alt="" class="">
-                        <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
-                    </a>
+                    <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                        style="min-width: auto">
+                        <li>
+                            <a class="ru fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="assets/images/en-flag.png" alt="">EN</a>
+                        </li>
+                        <li>
+                            <a class="en fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="assets/images/uz-flag.png" alt="">UZ</a>
+                        </li>
+                    </ul>
+                    <!-- End Language -->
                 </div>
-                <button type="button"
-                        class="outline-none border-none bg-white primary-shadow rounded-circle-mb d-lg-none d-flex align-items-center justify-content-center py-2 px-3 ms-3"
-                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                    <img src="./assets/images/svg/menu-burger.svg" style="width: 16px;" alt="">
-                </button>
+                <a href="#!"
+                   class="btn transition btn-secondary transition primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
+                    <img src="./assets/images/svg/phone.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
+                </a>
+                <a href="#!"
+                   class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn-white transition primary-radius py-2 px-3">
+                    <img src="./assets/images/svg/user.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
+                </a>
             </div>
+            <button type="button"
+                    class="outline-none border-none bg-white primary-shadow rounded-circle-mb d-lg-none d-flex align-items-center justify-content-center py-2 px-3 ms-3"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                <img src="./assets/images/svg/menu-burger.svg" style="width: 16px;" alt="">
+            </button>
         </div>
     </nav>
     <div class="container position-relative z-index-3 pt-5">
@@ -184,7 +252,7 @@
                                     спокойствия.
                                 </div>
                                 <a href="#!"
-                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                   class="btn btn-primary transition transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
                                     полис <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
@@ -207,7 +275,7 @@
                                     спокойствия. Two
                                 </div>
                                 <a href="#!"
-                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                   class="btn btn-primary transition transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
                                     полис <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
@@ -230,7 +298,7 @@
                                     спокойствия. Three
                                 </div>
                                 <a href="#!"
-                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                   class="btn btn-primary transition transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
                                     полис <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
@@ -253,7 +321,7 @@
                                     спокойствия. Four
                                 </div>
                                 <a href="#!"
-                                   class="btn btn-primary transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
+                                   class="btn btn-primary transition transition primary-radius d-flex align-items-center w-max-content mt-2 py-2 px-3">Купить
                                     полис <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
@@ -270,10 +338,10 @@
             <div class="d-sm-flex d-none align-items-center position-absolute bottom-0 end-0 w-100 mt-5"
                  style="height: 40px">
                 <div class="swiper-button-next">
-                    <i class='bx fs-5 btn-white rounded-circle text-light-emphasis p-2 bx-chevron-right'></i>
+                    <i class='bx fs-5 btn-white transition rounded-circle text-light-emphasis p-2 bx-chevron-right'></i>
                 </div>
                 <div class="swiper-button-prev">
-                    <i class='bx fs-5 btn-white rounded-circle text-light-emphasis p-2 bx-chevron-left'></i>
+                    <i class='bx fs-5 btn-white transition rounded-circle text-light-emphasis p-2 bx-chevron-left'></i>
                 </div>
             </div>
         </div>
@@ -381,9 +449,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Подробнее</a>
-                                            <a class="btn btn-primary primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                               href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" s>Подробнее</a>
+                                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
                                     </div>
@@ -430,9 +498,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">250 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Подробнее</a>
-                                            <a class="btn btn-primary primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
                                     </div>
@@ -487,9 +555,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">400 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Подробнее</a>
-                                            <a class="btn btn-primary primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
                                     </div>
@@ -544,9 +612,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">800 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Подробнее</a>
-                                            <a class="btn btn-primary primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
                                     </div>
@@ -558,38 +626,67 @@
                 <div class="tab-pane fade" id="osago-tab-pane" role="tabpanel"
                      aria-labelledby="profile-tab"
                      tabindex="0">
-                    <form class="row justify-content-center row-gap-3" action="" method="post">
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputEmail2" class="form-label fs-7 fw-bold text-black">Car
-                                number</label>
-                            <input required type="text" autocomplete="off" class="form-control"
-                                   id="exampleInputEmail2" placeholder="01S213BU"
-                                   aria-describedby="emailHelp">
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputPassword3"
-                                   class="form-label fs-7 fw-bold text-black">Passport</label>
-                            <input required type="text" autocomplete="off" class="form-control"
-                                   placeholder="AA3344566" id="exampleInputPassword3">
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputPassword4"
-                                   class="form-label fs-7 fw-bold text-black">Type</label>
-                            <select class="form-select" id="exampleInputPassword4"
-                                    aria-label="Default select example">
-                                <option selected>Select</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <div class="d-flex align-items-end h-100">
-                                <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
-                                </button>
+                    <form class="col-xl-11 mx-auto mb-xl-4 pb-5" action="" method="post">
+                        <div class="row justify-content-center row-gap-3">
+                            <div class="col-12 col-xl-3 col-sm-4">
+                                <label for="exampleInputEmail2" class="form-label fs-8 text-light-emphasis">Гос номер <span
+                                        class="text-secondary">*</span></label>
+                                <input required type="text" autocomplete="off" class="form-control"
+                                       id="exampleInputEmail2" placeholder="01M571SA"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-12 col-xl-1 col-sm-2 tech-pas">
+                                <label for="exampleInputPassword3"
+                                       class="form-label fs-8 text-light-emphasis ">Серия и номер тех. паспорта<span
+                                        class="text-secondary">*</span></label>
+                                <input required type="text" autocomplete="off" class="form-control"
+                                       placeholder="AAG" id="exampleInputPassword3">
+                            </div>
+                            <div class="col-12 col-xl-3 col-sm-3">
+                                <label for="exampleInputPassword7"
+                                       class="form-label fs-8 text-light-emphasis invisible">Серия и номер тех. паспорта<span
+                                        class="text-secondary">*</span></label>
+                                <input required type="text" autocomplete="off" class="form-control"
+                                       placeholder="9999999" id="exampleInputPassword7">
+                            </div>
+                            <div class="col-12 col-xl-3 col-sm-4">
+                                <label for="exampleInputPassword4"
+                                       class="form-label fs-8 text-light-emphasis">Количество водителей <span
+                                        class="text-secondary">*</span></label>
+                                <select class="form-select" id="exampleInputPassword4"
+                                        aria-label="Default select example" required>
+                                    <option selected value="">Select</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-xl-2 col-sm-4">
+                                <div class="d-flex align-items-start flex-column">
+                                    <span class="form-label fs-8 text-light-emphasis invisible">hide</span>
+                                    <button type="submit" class="btn btn-primary primary-radius transition fs-7 fw-bold">Расчет
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </form>
+                    <div class="partners-box primary-radius border-dashed border-1 p-3 mx-auto">
+                        <h4 class="text-black pb-3 border-bottom-dashed text-center mb-3 w-100">Наши страховые партнеры</h4>
+                        <div class="swiper partnersSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="d-flex align-items-center justify-content-center border-end-dashed h-100">
+                                        <img src="./assets/images/svg/partner1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="d-flex align-items-center justify-content-center border-end-dashed h-100">
+                                        <img src="./assets/images/svg/partner2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel"
                      aria-labelledby="contact-tab"
@@ -606,7 +703,7 @@
                             <label for="exampleInputPassword5"
                                    class="form-label fs-7 fw-bold text-black">Passport</label>
                             <input required type="text" autocomplete="off" class="form-control"
-                                   placeholder="AA3344566" id="exampleInputPassword5">
+                                   placeholder="9999999" id="exampleInputPassword5">
                         </div>
                         <div class="col-12 col-md-3 col-sm-4">
                             <label for="exampleInputPassword6"
@@ -621,7 +718,7 @@
                         </div>
                         <div class="col-12 col-md-3 col-sm-4">
                             <div class="d-flex align-items-end h-100">
-                                <button type="submit" class="btn btn-primary fs-7 fw-bold w-100">Submit
+                                <button type="submit" class="btn btn-primary transition fs-7 fw-bold w-100">Submit
                                 </button>
                             </div>
                         </div>
@@ -819,7 +916,7 @@
 
 <!--================ FOOTER | Omonjon ================-->
 <footer class="footer pb-5 bg-transparent position-relative">
-    <img src="./assets/images/pattern-footer.png" class="position-absolute start-0 bottom-0 w-100Mb z-n1"  alt="">
+    <img src="./assets/images/pattern-footer.png" class="position-absolute start-0 bottom-0 w-100Mb z-n1" alt="">
     <div class="container pb-lg-4 position-relative z-3">
         <div class="d-flex align-items-center justify-content-between flex-wrap flex-column flex-sm-row row-gap-4">
             <a href="#"><img src="./assets/images/svg/site-logo.svg" alt=""></a>
@@ -830,7 +927,7 @@
             <div class="d-flex align-items-center column-gap-3 column-gap-sm-0">
                 <a class="me-sm-2" href="#"><img src="./assets/images/telegram.png" alt=""></a>
                 <a class="" href="#"><img src="./assets/images/instagram.png" alt=""></a>
-                <a class="d-flex align-items-center column-gap-2 btn btn-primary primary-radius btn-footer ms-sm-4"
+                <a class="d-flex align-items-center column-gap-2 btn btn-primary transition primary-radius btn-footer ms-sm-4"
                    href="tel:+998900000000"><img class="" src="./assets/images/svg/phone-check.svg" alt=""><span
                         class="d-none d-sm-block fs-7 fw-semibold">Позвонить сейчас</span></a>
             </div>
@@ -864,7 +961,7 @@
 <script src="assets/script/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/script/main.js?v=0.3"></script>
+<script src="assets/script/main.js?v=0.4"></script>
 </body>
 
 </html>
