@@ -31,6 +31,16 @@
     .header .swiper-button-prev {
         left: 88% !important;
     }
+
+    .car-num {
+        width: 160px;
+    }
+    .tech-pas-num {
+        width: 145px;
+    }
+    .ins-type {
+        width: 170px;
+    }
 }
 
 /* ============ desktop view .end// ============ */
@@ -50,6 +60,25 @@
     .w-100Mb {
         width: 100%;
     }
+
+    .car-num {
+        width: 40%;
+    }
+    .tech-pas {
+        width: 16%;
+    }
+    .tech-pas-num {
+        width: 40%;
+    }
+    .ins-type {
+        width: 67%;
+    }
+    .calc-btn {
+        width: 30%;
+    }
+    .calc-btn button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -60,6 +89,30 @@
     .btn-footer {
         border-radius: 50% !important;
         padding: 14px !important;
+    }
+
+    .car-num {
+        width: 100%;
+    }
+
+    .tech-pas {
+        width: 30%;
+    }
+
+    .tech-pas-num {
+        width: 65%;
+    }
+
+    .ins-type {
+        width: 60%;
+    }
+
+    .calc-btn {
+        width: 35%;
+    }
+
+    .calc-btn button {
+        width: 100%;
     }
 }
 
