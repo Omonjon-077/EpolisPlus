@@ -257,6 +257,7 @@ button {
 .form-control:focus,
 .form-select:focus {
     box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);
+    border-color: var(--bs-primary);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -350,6 +351,77 @@ a {
     border: 1px solid transparent;
 }
 
+input[type=checkbox] {
+    -webkit-appearance: none; /* Remove default checkbox style on Safari */
+    -moz-appearance: none; /* Remove default checkbox style on Firefox */
+    appearance: none; /* Remove default checkbox style on other browsers */
+}
+
+.checkbox-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    border-radius: 8px;
+}
+
+input:checked ~ .checkbox-child {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary);
+}
+
+/*input:checked~.checkbox-child:has(> .services-box) {*/
+/*    border: 1px solid var(--bs-primary);*/
+/*    background-color: white;*/
+/*    box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);*/
+/*}*/
+
+.services-box.active {
+    border: 1px solid var(--bs-primary);
+    background-color: white;
+    box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);
+}
+
+/* Checkmark */
+.checkbox-child::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6.5px;
+    top: 2px;
+    width: 5px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Display checkmark when checked */
+input:checked ~ .checkbox-child::after {
+    display: block;
+}
+
+.services-box {
+    border: 1px solid #DC30551A;
+    background-color: #DC30550D;
+    min-height: 400px;
+}
+
+.services-box:hover {
+    border: 1px solid var(--bs-primary);
+    background-color: white;
+    box-shadow: 0 0 0 0.25rem rgba(0, 160, 112, .25);
+}
+
+.bg-secondary-light {
+    border: 1px solid #DC30551A;
+    background-color: #DC30550D;
+    padding: 10px 12px;
+}
+
 .nav-tabs .nav-link svg path {
     fill: transparent;
     stroke: var(--bs-gray);
@@ -367,10 +439,6 @@ a {
 
 .pay-amount {
     padding: 8px 10px;
-}
-
-.calculator-section ::-webkit-scrollbar {
-    background-color: transparent;
 }
 
 .car-num {
@@ -418,11 +486,7 @@ a {
     line-height: 24px;
 }
 
-.form-control[type=date]::placeholder {
-    color: red;
-}
-
-input[type='radio']{
+input[type='radio'] {
     accent-color: var(--bs-primary);
 }
 

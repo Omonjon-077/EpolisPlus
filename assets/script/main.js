@@ -107,3 +107,25 @@ const scrollUp = () => {
         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp);
+
+/*=============== CALCULATOR SECTION | SERVICES ===============*/
+if ($(".services-box").length) {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const checkbox = document.querySelectorAll('.services-box input[type=checkbox]');
+        const parentDiv = document.querySelectorAll('.services-box');
+
+        checkbox.forEach(item => {
+            item.addEventListener('change', () => {
+                if (item.checked) {
+                    parentDiv.forEach(div => {
+                        div.classList.add('active');
+                    });
+                } else {
+                    parentDiv.forEach(div => {
+                        div.classList.remove('active');
+                    });
+                }
+            });
+        });
+    });
+}
