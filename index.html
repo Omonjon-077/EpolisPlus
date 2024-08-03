@@ -718,38 +718,114 @@
                 <div class="tab-pane fade" id="travel-tab-pane" role="tabpanel"
                      aria-labelledby="contact-tab"
                      tabindex="0">
-                    <form class="row justify-content-center row-gap-3" action="" method="post">
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputEmail3" class="form-label fs-7 fw-bold text-black">Car
-                                number</label>
-                            <input required type="text" autocomplete="off" class="form-control"
-                                   id="exampleInputEmail3" placeholder="01S213BU"
-                                   aria-describedby="emailHelp">
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputPassword5"
-                                   class="form-label fs-7 fw-bold text-black">Passport</label>
-                            <input required type="text" autocomplete="off" class="form-control"
-                                   placeholder="9999999" id="exampleInputPassword5">
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <label for="exampleInputPassword6"
-                                   class="form-label fs-7 fw-bold text-black">Type</label>
-                            <select class="form-select" id="exampleInputPassword6"
-                                    aria-label="Default select example">
-                                <option selected>Select</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-4">
-                            <div class="d-flex align-items-end h-100">
-                                <button type="submit" class="btn btn-primary transition fs-7 fw-bold w-100">Submit
-                                </button>
+                    <form class="container-mini mx-auto mb-5" action="" method="post">
+                        <div class="row row-gap-3">
+                            <div class="col-12 col-md-6 col-sm-6">
+                                <label for="exampleInputEmail3" class="form-label fs-8 text-light-emphasis">Страны
+                                    <span class="text-secondary">*</span></label>
+                                <input required type="text" autocomplete="off" class="form-control"
+                                       id="exampleInputEmail3" placeholder="Страны..."
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-12 col-md-6 col-sm-6">
+                                <label for="exampleInputSelect2" class="form-label fs-8 text-light-emphasis">Тип полиса
+                                    <span class="text-secondary">*</span></label>
+                                <select class="form-select text-black" id="exampleInputSelect2"
+                                        aria-label="Default select example" required="">
+                                    <option selected="" value="">Select</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-5 col-sm-4">
+                                <label for="exampleInputDate1"
+                                       class="form-label fs-8 text-light-emphasis">Дата начала<span
+                                        class="text-secondary">*</span></label>
+                                <input required type="date" autocomplete="off" class="form-control"
+                                       id="exampleInputDate1" placeholder="Страны..."
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-12 col-lg-5 col-sm-4">
+                                <label for="exampleInputDate2"
+                                       class="form-label fs-8 text-light-emphasis">Дата окончания<span class="text-secondary">*</span></label>
+                                <input required type="date" autocomplete="off" class="form-control"
+                                       id="exampleInputDate2" placeholder="Страны..."
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-12 col-lg-2 col-sm-4">
+                                <label for="exampleInputDate3"
+                                       class="form-label fs-8 text-light-emphasis">Кол-во дней<span class="text-secondary">*</span></label>
+                                <input required type="text" autocomplete="off" class="form-control"
+                                       id="exampleInputDate3" placeholder="0"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex flex-column">
+                                    <h5 class="fs-8 text-light-emphasis mb-2">Цель поездки</h5>
+                                    <div class="d-flex column-gap-2">
+                                        <input id="trip1" type="radio" class="" name="trips" required>
+                                        <label for="trip1" class="fw-semibold text-black">Туризм / Служебная командировка</label>
+                                    </div>
+                                    <div class="d-flex column-gap-2">
+                                        <input id="trip2" type="radio" class="" name="trips" required>
+                                        <label for="trip2" class="fw-semibold text-black">Работа (Физический труд)</label>
+                                    </div>
+                                    <div class="d-flex column-gap-2">
+                                        <input id="trip3" type="radio" class="" name="trips" required>
+                                        <label for="trip3" class="fw-semibold text-black">Спорт</label>
+                                    </div>
+                                    <div class="d-flex column-gap-2">
+                                        <input id="trip4" type="radio" class="" name="trips" required>
+                                        <label for="trip4" class="fw-semibold text-black">Учеба</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary primary-radius mt-4">Расчет</button>
+                                </div>
                             </div>
                         </div>
                     </form>
+                    <div class="container-mini primary-radius border-dashed border-1 p-3 mx-auto mt-lg-2 d-none">
+                        <h4 class="text-black pb-3 border-bottom-dashed text-center mb-3 w-100">Наши страховые
+                            партнеры</h4>
+                        <div class="swiper partnersSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="d-flex align-items-center justify-content-center border-end-dashed h-100">
+                                        <img src="./assets/images/svg/partner1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="d-flex align-items-center justify-content-center border-end-dashed h-100">
+                                        <img src="./assets/images/svg/partner2.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hide Block -->
+                    <div class="container-mini mx-auto d-flex align-items-sm-start align-items-center flex-column pt-3 row-gap-3 border-top-dashed">
+                        <h4 class="fs-5 fw-semibold text-block text-sm-start text-center mt-3">Результаты</h4>
+                        <div class="d-flex calc-result justify-content-sm-between justify-content-center flex-wrap align-items-center primary-radius bg-white row-gap-2 column-gap-3 w-100">
+                            <div class="calc-result-img">
+                                <img class="w-100 h-100" src="./assets/images/svg/partner2.svg" alt="">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="text-light-emphasis">от</p>
+                                <h5 class="fw-semibold fs-7 text-black ms-2 me-3">5 500 сум</h5>
+                                <a href="#" class="btn btn-primary primary-radius fw-semibold text-white fs-8 ms-3">Купить</a>
+                            </div>
+                        </div>
+                        <div class="d-flex calc-result justify-content-sm-between justify-content-center flex-wrap align-items-center primary-radius bg-white row-gap-2 column-gap-3 w-100">
+                            <div class="calc-result-img">
+                                <img class="w-100 h-100" src="./assets/images/svg/partner1.svg" alt="">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="text-light-emphasis">от</p>
+                                <h5 class="fw-semibold fs-7 text-black ms-2 me-3">5 500 сум</h5>
+                                <a href="#" class="btn btn-primary primary-radius fw-semibold text-white fs-8 ms-3">Купить</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="others-tab-pane" role="tabpanel"
                      aria-labelledby="contact-tab"

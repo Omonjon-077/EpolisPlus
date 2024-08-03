@@ -418,6 +418,14 @@ a {
     line-height: 24px;
 }
 
+.form-control[type=date]::placeholder {
+    color: red;
+}
+
+input[type='radio']{
+    accent-color: var(--bs-primary);
+}
+
 .calc-result {
     padding: 8px 16px;
     box-shadow: 0 4px 8px 0 #00000008;
