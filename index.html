@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/styles/main.css?v=0.8">
-    <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.4">
+    <link rel="stylesheet" href="assets/styles/main.css?v=0.9">
+    <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.5">
 
     <title>EpolisPlus</title>
 </head>
@@ -89,7 +89,7 @@
                 <!-- End Language -->
             </div>
             <a href="#!"
-               class="btn-primary bg-white primary-shadow border-light border border-2 mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
+               class="btn btn-white primary-radius mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
                 <img src="./assets/images/svg/user.svg" alt="" class="">
                 <span class="text-black fs-8 fw-regular">Войти</span>
             </a>
@@ -98,12 +98,12 @@
 </div>
 
 <!--================ KASKO MODAL | Omonjon ================-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalKasko" tabindex="-1" aria-labelledby="modalKaskoLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content p-4">
             <div class="modal-header border-0 border-bottom-dashed pb-3 px-0 pt-0">
                 <div class="d-flex align-items-center column-gap-2 w-100">
-                    <div class="">
+                    <div class="d-none d-sm-block">
                         <img src="assets/images/simple-icon.png" alt="">
                     </div>
                     <div class="d-flex flex-column align-items-start">
@@ -111,7 +111,7 @@
                         <h4 class="text-black fw-semibold fs-5">Simple</h4>
                     </div>
                 </div>
-                <div class="d-flex flex-column text-end align-items-end w-100 me-4">
+                <div class="d-none d-sm-flex flex-column text-end align-items-end w-100 me-4">
                     <h5 class="fs-8 text-light-emphasis">Общий лимит возмещения</h5>
                     <h4 class="text-secondary fs-4 fw-semibold">3 000 000</h4>
                 </div>
@@ -122,8 +122,8 @@
                 </button>
             </div>
             <div class="modal-body p-0">
-                <div class="row mt-3">
-                    <div class="col-7 border-end-dashed">
+                <div class="row row-gap-4 mt-3">
+                    <div class="col-md-7 border-end-dashed border-bottom-dashed pb-3">
                         <div class="d-flex flex-column align-items-start text-start row-gap-3">
                             <h5 class="fs-8 text-light-emphasis">Страховое покрытие</h5>
                             <div class="d-flex flex-column">
@@ -152,11 +152,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5">
+                    <div class="col-md-5">
                         <div class="d-flex flex-column align-items-start w-100">
                             <h5 class="fs-8 text-light-emphasis mb-1">Сумма оплаты</h5>
                             <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount w-100">
                                 <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                            <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                               href="#">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--================ SERVICES MODAL | Omonjon ================-->
+<div class="modal fade" id="modalServices" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+            <div class="modal-header border-0 border-bottom-dashed pb-3 px-0 pt-0">
+                <div class="d-flex align-items-center w-100">
+                    <div class="me-2 pe-1 d-none d-sm-block">
+                        <img src="assets/images/svg/pen.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start">
+                        <h5 class="fs-8 text-light-emphasis">Услуга</h5>
+                        <h4 class="text-black fw-semibold fs-5">Оформления "Европротокола"</h4>
+                    </div>
+                </div>
+                <button type="button"
+                        class="btn-close rounded-circle primary-shadow border-0 d-flex align-items-center bg-white justify-content-center mb-auto"
+                        data-bs-dismiss="modal" aria-label="Close">
+                    <i class='bx bx-x text-black fs-5'></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="row row-gap-4 mt-3">
+                    <div class="col-md-7 border-end-dashed">
+                        <div class="d-flex flex-column align-items-start text-start row-gap-2">
+                            <h5 class="fs-8 text-light-emphasis">Описание</h5>
+                            <div class="fs-7 text-black">- Мы предоставляем услугу оформления европротокола,
+                                необходимого для решения
+                                юридических вопросов при дорожно-транспортных происшествиях.
+                            </div>
+                            <div class="fs-7 text-black">- Наши специалисты помогут правильно и оперативно оформить все
+                                необходимые документы, чтобы обеспечить вашу защиту и законные интересы.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex flex-column align-items-start w-100">
+                            <h5 class="fs-8 text-light-emphasis mb-1">Сумма оплаты</h5>
+                            <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount w-100">
+                                <img src="./assets/images/svg/coin.svg" alt="">150 000 сум</p>
                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
                                href="#">Оформить</a>
                         </div>
@@ -226,7 +275,7 @@
                     <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
                 </a>
                 <a href="#!"
-                   class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn-white transition primary-radius py-2 px-3">
+                   class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn btn-white transition primary-radius py-2 px-3">
                     <img src="./assets/images/svg/user.svg" alt="" class="">
                     <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
                 </a>
@@ -449,8 +498,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" s>Подробнее</a>
+                                            <a class="btn btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                               href="#" data-bs-toggle="modal"
+                                               data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
@@ -459,8 +509,6 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
-
-
                                     <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
                                         <div class="">
                                             <img src="assets/images/simple-icon.png" alt="">
@@ -498,8 +546,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">250 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Подробнее</a>
+                                            <a class="btn btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                               href="#" data-bs-toggle="modal"
+                                               data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
@@ -508,8 +557,6 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex flex-column align-items-start bg-white primary-radius primary-shadow p-3 box-calc">
-
-
                                     <div class="d-flex align-items-center column-gap-2 pb-2 border-bottom-dashed w-100">
                                         <div class="">
                                             <img src="assets/images/simple-icon.png" alt="">
@@ -555,8 +602,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">400 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Подробнее</a>
+                                            <a class="btn btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                               href="#" data-bs-toggle="modal"
+                                               data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
@@ -612,8 +660,9 @@
                                         <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                             <img src="./assets/images/svg/coin.svg" alt="">800 000 сум</p>
                                         <div class="d-flex align-items-center column-gap-2">
-                                            <a class="btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Подробнее</a>
+                                            <a class="btn btn-white transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
+                                               href="#" data-bs-toggle="modal"
+                                               data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
                                                href="#">Оформить</a>
                                         </div>
@@ -839,9 +888,10 @@
                         <p class="fs-7 text-black ms-sm-2 me-sm-1">Оформляя более 2 услуг</p>
                         <p class="text-secondary fw-semibold fs-7">Вы получаете скидку 20%</p>
                     </div>
-                    <div class="row row-gap-3 mt-3 pt-3">
+                    <div class="row row-gap-4 mt-3 pt-3">
                         <div class="col-xl-3 col-lg-4 col-md-6">
-                            <label for="services1" class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
+                            <label for="services1"
+                                   class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
                                 <div class="d-flex justify-content-between w-100 mb-1 position-relative">
                                     <img src="./assets/images/svg/pen.svg" alt="">
                                     <input type="checkbox" id="services1" class="rounded-2 mb-auto" name="services">
@@ -851,17 +901,19 @@
                                 <div class="d-flex flex-column pt-3 border-top-dashed w-100 mt-auto">
                                     <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
                                     <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
-                                        <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                                        <img src="./assets/images/svg/coin.svg" alt="">150 000 сум</p>
                                     <div class="d-flex align-items-center">
-                                        <a class="btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
-                                           href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                           s="">Подробнее</a>
+                                        <a class="btn btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#modalServices"
+                                           href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </label>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
-                            <label for="services2" class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
+                            <label for="services2"
+                                   class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
                                 <div class="d-flex justify-content-between w-100 mb-1 position-relative">
                                     <img src="./assets/images/svg/car-evacuation.svg" alt="">
                                     <input type="checkbox" id="services2" class="rounded-2 mb-auto" name="services">
@@ -871,19 +923,21 @@
                                 <div class="d-flex flex-column pt-3 border-top-dashed w-100 mt-auto">
                                     <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
                                     <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
-                                        <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                                        <img src="./assets/images/svg/coin.svg" alt="">150 000 сум</p>
                                     <div class="d-flex align-items-center">
-                                        <a class="btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
-                                           href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                           s="">Подробнее</a>
+                                        <a class="btn btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#modalServices"
+                                           href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </label>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
-                            <label for="services3" class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
+                            <label for="services3"
+                                   class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
                                 <div class="d-flex justify-content-between w-100 mb-1 position-relative">
-                                    <img src="./assets/images/svg/car-evacuation.svg" alt="">
+                                    <img src="./assets/images/svg/oil.svg" alt="">
                                     <input type="checkbox" id="services3" class="rounded-2 mb-auto" name="services">
                                     <span class="checkbox-child"></span>
                                 </div>
@@ -891,34 +945,109 @@
                                 <div class="d-flex flex-column pt-3 border-top-dashed w-100 mt-auto">
                                     <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
                                     <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
-                                        <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
+                                        <img src="./assets/images/svg/coin.svg" alt="">50 000 сум</p>
                                     <div class="d-flex align-items-center">
-                                        <a class="btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
-                                           href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                           s="">Подробнее</a>
+                                        <a class="btn btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#modalServices"
+                                           href="#">Подробнее</a>
                                     </div>
                                 </div>
                             </label>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
-                            <label for="services4" class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
+                            <label for="services4"
+                                   class="d-flex flex-column align-items-start services-box primary-radius transition p-3">
                                 <div class="d-flex justify-content-between w-100 mb-1 position-relative">
-                                    <img src="./assets/images/svg/car-evacuation.svg" alt="">
+                                    <img src="./assets/images/svg/charger.svg" alt="">
                                     <input type="checkbox" id="services4" class="rounded-2 mb-auto" name="services">
                                     <span class="checkbox-child"></span>
                                 </div>
-                                <h5 class="fs-5 fw-semibold text-black mt-2 mb-3">ДЗарядка и запуск аккумулятора</h5>
+                                <h5 class="fs-5 fw-semibold text-black mt-2 mb-3">Зарядка и запуск аккумулятора</h5>
                                 <div class="d-flex flex-column pt-3 border-top-dashed w-100 mt-auto">
+                                    <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                    <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
+                                        <img src="./assets/images/svg/coin.svg" alt="">60 000 сум</p>
+                                    <div class="d-flex align-items-center">
+                                        <a class="btn btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                                           data-bs-toggle="modal"
+                                           data-bs-target="#modalServices"
+                                           href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-xl-6 col-md-8">
+                            <div class="d-flex flex-column align-content-start bg-white primary-radius primary-border p-3">
+                                <div class="d-flex flex-column align-items-center p-4">
+                                    <img src="./assets/images/svg/shield-hide.svg" class="mt-2" alt="">
+                                    <h5 class="fs-7 text-light-emphasis px-2 my-2">Список услуг пуст. Выберите одну или
+                                        несколько услуг. </h5>
+                                </div>
+                                <div class="d-flex flex-column pt-3 border-top-dashed w-100">
+                                    <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
+                                    <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount disabled">
+                                        <img src="./assets/images/svg/coin.svg" alt="">0 сум</p>
+                                    <div class="d-flex align-items-center">
+                                        <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center disabled"
+                                           href="#">Оформить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hide Block when select product -->
+                    <div class="row justify-content-center mt-3 d-none">
+                        <div class="col-xl-6 col-md-8">
+                            <div class="d-flex flex-column align-content-start bg-white primary-radius primary-border p-3">
+                                <h5 class="text-black fs-7 mb-2 pb-1">Выбранные услуги:</h5>
+                                <div class="d-flex align-items-center justify-content-sm-between justify-content-center row-gap-1 flex-wrap flex-sm-row bg-light primary-radius column-gap-2  px-3 py-12px mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="text-black fs-8 me-2 pe-1">1</h6>
+                                        <h5 class="text-black fs-8">Оформления "Европротокола"</h5>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="fs-8 text-black me-2 pe-1">150 000 сум</h6>
+                                        <button class="border-0 outline-none bg-transparent" type="button">
+                                            <img src="./assets/images/svg/trash.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-sm-between justify-content-center row-gap-1 flex-wrap flex-sm-row bg-light primary-radius column-gap-2  px-3 py-12px mb-2">
+
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="text-black fs-8 me-2 pe-1">1</h6>
+                                        <h5 class="text-black fs-8">Оформления "Европротокола"</h5>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="fs-8 text-black me-2 pe-1">150 000 сум</h6>
+                                        <button class="border-0 outline-none bg-transparent" type="button">
+                                            <img src="./assets/images/svg/trash.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between border-top-dashed w-100 mt-1 mb-3 pt-12px px-3">
+                                    <h6 class="fs-7 text-black">Итого:</h6>
+                                    <h5 class="fs-7 text-black fw-semibold">275 000 сум</h5>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between border-top-dashed w-100 mt-1 mb-3 pt-12px px-3">
+
+                                    <h6 class="d-flex align-items-center fs-7 text-secondary fw-semibold"><img
+                                            src="./assets/images/svg/gift.svg" class="me-1" alt="">Скидка 20%</h6>
+                                    <h5 class="fs-7 text-secondary fw-semibold">-55 000 сум</h5>
+                                </div>
+                                <div class="d-flex flex-column pt-3 border-top-dashed w-100">
                                     <h5 class="text-light-emphasis fs-8 mb-1">Сумма оплаты</h5>
                                     <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount">
                                         <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
                                     <div class="d-flex align-items-center">
-                                        <a class="btn-white transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
-                                           href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                           s="">Подробнее</a>
+                                        <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
+                                           href="#">Оформить</a>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -929,7 +1058,7 @@
     <!--==================== APP | Omonjon ====================-->
     <section class="app-section mt-lg-5 pt-5">
         <div class="container">
-            <div class="d-flex overflow-hidden flex-column position-relative flex-sm-row row-gap-3 align-items-center justify-content-center primary-radius mx-auto pt-3 app-box mb-lg-5">
+            <div class="d-flex overflow-hidden flex-column position-relative flex-sm-row row-gap-3 align-items-center justify-content-center primary-radius mx-auto pt-3 px-3 app-box mb-lg-5">
 
                 <img src="./assets/images/pattern.png"
                      class="position-absolute top-0 start-0 z-index-1 w-100 d-none d-sm-block" alt="">
@@ -938,8 +1067,8 @@
                     <h6 class="fs-5 fw-semibold text-primary">Cкачай приложение</h6>
                     <h5 class="text-black fw-semibold fs-5">Доступно для Android и iOS</h5>
                     <div class="d-flex align-items-center column-gap-2 mt-3">
-                        <a href="#"><img src="./assets/images/app-store.png" alt=""></a>
-                        <a href="#"><img src="./assets/images/google-play.png" alt=""></a>
+                        <a class="w-100" href="#"><img class="w-100" src="./assets/images/app-store.png" alt=""></a>
+                        <a class="w-100" href="#"><img class="w-100" src="./assets/images/google-play.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -1155,7 +1284,7 @@
 <script src="assets/script/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/script/main.js?v=0.5"></script>
+<script src="assets/script/main.js?v=0.6"></script>
 </body>
 
 </html>

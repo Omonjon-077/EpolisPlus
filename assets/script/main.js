@@ -7,80 +7,85 @@ window.addEventListener("load", function (eventObject) {
 });
 
 /*=============== Intro Swiper ===============*/
-let swiperIntro = new Swiper(".introSwiper", {
-    grabCursor: true,
-    spaceBetween: 40,
-    speed: 700,
-    autoplay: {
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        delay: 3000,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    keyboard: true,
-});
+if ($(".introSwiper").length) {
+    let swiperIntro = new Swiper(".introSwiper", {
+        grabCursor: true,
+        spaceBetween: 40,
+        speed: 700,
+        autoplay: {
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        keyboard: true,
+    });
+}
 
 /*=============== Calculator Swiper ===============*/
-let swiperCalculator = new Swiper(".calculatorSwiper", {
-    centeredSlides: false,
-    loop: false,
-    grabCursor: true,
-    speed: 850,
-    autoplay: {
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        delay: 2500,
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 25,
+if ($(".calculatorSwiper").length) {
+    let swiperCalculator = new Swiper(".calculatorSwiper", {
+        centeredSlides: false,
+        loop: false,
+        grabCursor: true,
+        speed: 850,
+        autoplay: {
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            delay: 2500,
         },
-        // when window width is >= 1200px
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-        // when window width is >= 1400px
-        1200: {
-            slidesPerView: 3,
-            spaceBetween: 16,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 25,
+            },
+            // when window width is >= 1200px
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            // when window width is >= 1400px
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
         }
-    }
-});
+    });
+}
 
 /*=============== PARTNERS SWIPER ===============*/
-let swiper = new Swiper(".partnersSwiper", {
-    centeredSlides: false,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        delay: 3000,
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+if ($(".partnersSwiper").length) {
+    let swiper = new Swiper(".partnersSwiper", {
+        centeredSlides: false,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            delay: 3000,
         },
-        // when window width is >= 576px
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 0,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            // when window width is >= 576px
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 0,
+            }
         }
-    }
-});
-
+    });
+}
 /*=============== HEADER FIXED ===============*/
 if ($("#myHeader").length) {
     window.onscroll = function () {
@@ -112,18 +117,13 @@ window.addEventListener('scroll', scrollUp);
 if ($(".services-box").length) {
     document.addEventListener('DOMContentLoaded', (event) => {
         const checkbox = document.querySelectorAll('.services-box input[type=checkbox]');
-        const parentDiv = document.querySelectorAll('.services-box');
 
         checkbox.forEach(item => {
             item.addEventListener('change', () => {
                 if (item.checked) {
-                    parentDiv.forEach(div => {
-                        div.classList.add('active');
-                    });
+                    item.parentElement.parentElement.classList.add('active');
                 } else {
-                    parentDiv.forEach(div => {
-                        div.classList.remove('active');
-                    });
+                    item.parentElement.parentElement.classList.remove('active');
                 }
             });
         });

@@ -1,11 +1,18 @@
-/* ============ only desktop view for dropdown menus | Omonjon ============ */
+/* ============ only min width | Omonjon ============ */
+@media (min-width: 768px) {
+    .modal .modal-body .border-bottom-dashed {
+        border-bottom: none !important;
+    }
+}
+
 @media (min-width: 1400px) {
     .header .container-self {
         max-width: 1440px !important;
     }
 }
 
-@media all and (max-width: 1399px) {
+/* ============ only max width | Omonjon ============ */
+@media (max-width: 1399px) {
     .header .swiper-button-prev {
         left: 92.7% !important;
     }
@@ -35,16 +42,21 @@
     .car-num {
         width: 160px;
     }
+
     .tech-pas-num {
         width: 145px;
     }
+
     .ins-type {
         width: 170px;
     }
 }
 
-/* ============ desktop view .end// ============ */
 @media (max-width: 767px) {
+    .modal .modal-body .border-end-dashed {
+        border-right: none;
+    }
+
     .scroll_up {
         right: 1rem;
     }
@@ -64,18 +76,23 @@
     .car-num {
         width: 40%;
     }
+
     .tech-pas {
         width: 16%;
     }
+
     .tech-pas-num {
         width: 40%;
     }
+
     .ins-type {
         width: 67%;
     }
+
     .calc-btn {
         width: 30%;
     }
+
     .calc-btn button {
         width: 100%;
     }
