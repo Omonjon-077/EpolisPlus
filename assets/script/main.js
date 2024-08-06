@@ -6,7 +6,44 @@ window.addEventListener("load", function (eventObject) {
     $('.load').fadeOut("slow");
 });
 
-/*=============== Intro Swiper ===============*/
+/*=============== Header fixed ===============*/
+if ($("#myHeader").length) {
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+}
+
+/*=============== Hide & show password ===============*/
+if ($(".show-hide").length) {
+    let showHideBtn = document.querySelectorAll('.show-hide');
+    let num;
+    showHideBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (num === 1) {
+                btn.className='bx bx-show show-hide';
+                btn.previousElementSibling.type='password';
+                num = 0
+            } else {
+                btn.className='bx bx-hide show-hide';
+                btn.previousElementSibling.type='text';
+                num = 1
+            }
+        });
+    })
+}
+
+/*=============== Intro swiper ===============*/
 if ($(".introSwiper").length) {
     let swiperIntro = new Swiper(".introSwiper", {
         grabCursor: true,
@@ -29,7 +66,7 @@ if ($(".introSwiper").length) {
     });
 }
 
-/*=============== Calculator Swiper ===============*/
+/*=============== Calculator swiper ===============*/
 if ($(".calculatorSwiper").length) {
     let swiperCalculator = new Swiper(".calculatorSwiper", {
         centeredSlides: false,
@@ -61,7 +98,7 @@ if ($(".calculatorSwiper").length) {
     });
 }
 
-/*=============== PARTNERS SWIPER ===============*/
+/*=============== Partners swiper ===============*/
 if ($(".partnersSwiper").length) {
     let swiper = new Swiper(".partnersSwiper", {
         centeredSlides: false,
@@ -86,34 +123,19 @@ if ($(".partnersSwiper").length) {
         }
     });
 }
-/*=============== HEADER FIXED ===============*/
-if ($("#myHeader").length) {
-    window.onscroll = function () {
-        myFunction()
-    };
 
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
+/*=============== Show scroll up ===============*/
+if ($("#scroll-up").length) {
+    const scrollUp = () => {
+        const scrollUp = document.getElementById('scroll-up')
+        // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+        this.scrollY >= 300 ? scrollUp.classList.add('show-scroll')
+            : scrollUp.classList.remove('show-scroll')
     }
+    window.addEventListener('scroll', scrollUp);
 }
 
-/*=============== SHOW SCROLL UP ===============*/
-const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-    this.scrollY >= 300 ? scrollUp.classList.add('show-scroll')
-        : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp);
-
-/*=============== CALCULATOR SECTION | SERVICES ===============*/
+/*=============== Calculator section | services ===============*/
 if ($(".services-box").length) {
     document.addEventListener('DOMContentLoaded', (event) => {
         const checkbox = document.querySelectorAll('.services-box input[type=checkbox]');

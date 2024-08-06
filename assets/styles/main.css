@@ -96,6 +96,10 @@ button[aria-expanded^="true"] i {
     box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
 }
 
+.h-72px {
+    height: 72px;
+}
+
 .hover-link:hover {
     color: #737373 !important;
 }
@@ -195,7 +199,7 @@ button[aria-expanded^="true"] i {
 }
 
 .fs-6 {
-    font-size: 1.25rem !important;
+    font-size: 1.125rem !important;
 }
 
 .fs-7 {
@@ -397,6 +401,7 @@ input[type=checkbox] {
     background-color: #FFFFFF;
     border: 1px solid #EFEFEF;
     border-radius: 8px;
+    transition: var(--primary-transition);
 }
 
 input:checked ~ .checkbox-child {
@@ -422,6 +427,7 @@ input:checked ~ .checkbox-child {
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+    transition: var(--primary-transition);
 }
 
 /* Display checkmark when checked */
@@ -557,6 +563,10 @@ input[type='radio'] {
 /*=============== SCROLL BAR | Omonjon ===============*/
 .footer .btn-footer {
     padding: 12px 20px;
+}
+
+.footer .social-btn {
+    padding: 14px;
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/
