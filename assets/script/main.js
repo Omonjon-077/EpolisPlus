@@ -12,8 +12,8 @@ if ($("#myHeader").length) {
         myFunction()
     };
 
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
+    let header = document.getElementById("myHeader");
+    let sticky = header.offsetTop;
 
     function myFunction() {
         if (window.pageYOffset > sticky) {
@@ -31,12 +31,12 @@ if ($(".show-hide").length) {
     showHideBtn.forEach(btn => {
         btn.addEventListener("click", () => {
             if (num === 1) {
-                btn.className='bx bx-show show-hide';
-                btn.previousElementSibling.type='password';
+                btn.className = 'bx bx-show show-hide';
+                btn.previousElementSibling.type = 'password';
                 num = 0
             } else {
-                btn.className='bx bx-hide show-hide';
-                btn.previousElementSibling.type='text';
+                btn.className = 'bx bx-hide show-hide';
+                btn.previousElementSibling.type = 'text';
                 num = 1
             }
         });
@@ -135,19 +135,55 @@ if ($("#scroll-up").length) {
     window.addEventListener('scroll', scrollUp);
 }
 
-/*=============== Calculator section | services ===============*/
-if ($(".services-box").length) {
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const checkbox = document.querySelectorAll('.services-box input[type=checkbox]');
+/*=============== Profile page | progressbar ===============*/
+if ($(".progress-arc").length) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const arcBackground = document.querySelectorAll('.progress-arc__background');
+        const arcProgress = document.querySelectorAll('.progress-arc__progress');
+        const valueText = document.querySelectorAll('.progress-arc__value');
 
-        checkbox.forEach(item => {
-            item.addEventListener('change', () => {
-                if (item.checked) {
-                    item.parentElement.parentElement.classList.add('active');
-                } else {
-                    item.parentElement.parentElement.classList.remove('active');
-                }
-            });
+        function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+            const angleInRadians = (angleInDegrees - 270) * Math.PI / 180.0;
+            return {
+                x: centerX + (radius * Math.cos(angleInRadians)),
+                y: centerY + (radius * Math.sin(angleInRadians))
+            };
+        }
+
+        function describeArc(x, y, radius, startAngle, endAngle) {
+            const start = polarToCartesian(x, y, radius, endAngle);
+            const end = polarToCartesian(x, y, radius, startAngle);
+            const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+            return [
+                "M", start.x, start.y,
+                "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+            ].join(" ");
+        }
+
+        function setProgress(percent, min = 0, max = 100) {
+            const centerX = 100;
+            const centerY = 100;
+            const radius = 92;
+            const startAngle = 45;
+            const endAngle = 315;
+            const totalAngle = endAngle - startAngle;
+
+
+            arcBackground.forEach(color => {
+                color.setAttribute("d", describeArc(centerX, centerY, radius, startAngle, endAngle));
+            })
+
+            const progressAngle = startAngle + (percent.textContent / (max - min)) * totalAngle;
+            let parentClosest = percent.closest('.progress-arc')
+            if(parentClosest)
+            {
+                let arcPro = parentClosest.querySelector('.progress-arc__progress');
+                arcPro.setAttribute("d", describeArc(centerX, centerY, radius, startAngle, progressAngle));
+            }
+        }
+
+        valueText.forEach((item,index) => {
+            setProgress(item, 0, 365);
         });
     });
 }

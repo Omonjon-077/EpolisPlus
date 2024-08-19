@@ -62,11 +62,17 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Geist Thin';
     src: url('../fonts/Geist/Geist-Thin.otf') format('otf'),
     url('../fonts/Geist/Geist-Thin.ttf') format('ttf');
     font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FE-FONT Regular';
+    src: url('../fonts/FE-FONT.TTF');
+    font-weight: 400;
     font-style: normal;
 }

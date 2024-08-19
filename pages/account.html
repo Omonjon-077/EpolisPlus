@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--================ DESCRIPTION | Omonjon ================-->
+    <meta name="description" content="EpolisPlus, Страховой компании в Узбекистан">
+
+    <!--================ FAVICON | Omonjon ================-->
+    <link rel="shortcut icon" href="../assets/images/svg/favicon.svg" type="image/x-icon">
+
+    <!--============== BOX ICONS CSS 2.1.4v | Omonjon ==============-->
+    <link rel="stylesheet" href="../assets/styles/boxicons.min.css">
+
+    <!--============== SWIPER CSS 8.1.1v | Omonjon ==============-->
+    <link rel="stylesheet" href="../assets/styles/swiper-bundle.min.css">
+
+    <!--================ BOOTSTRAP CSS 5.3v | Omonjon ===============-->
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+
+    <!--================ STYLE CSS | Omonjon ================-->
+    <link rel="stylesheet" href="../assets/styles/main.css?v=1.5">
+    <link rel="stylesheet" href="../assets/styles/breakpoints.css?v=0.5">
+    <link rel="stylesheet" href="../assets/styles/account.css?v=0.2">
+
+    <title>Учетная запись</title>
+</head>
+<body>
+
+<!--================ EDIT PROFILE MODAL | Omonjon ================-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mx-auto px-2">
+        <div class="modal-content p-4">
+            <div class="modal-header justify-content-start border-0 p-0 mb-4">
+                <div class="profile-img rounded-circle me-3">
+                    <img src="../assets/images/ava.png" width="100%" height="100%" alt="">
+                </div>
+                <button class="btn btn-white primary-radius d-flex column-gap-2 fs-8 align-items-center justify-content-center py-2">
+                    <img src="../assets/images/svg/upload-img.svg" alt="">Загрузить фото
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <form class="d-flex flex-column row-gap-3" method="POST" action="">
+                    <div class="d-flex flex-column">
+                        <label for="exampleInputEmail1" class="form-label fs-8 text-light-emphasis">Имя
+                            <span class="text-secondary ms-1">*</span></label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInputEmail1" placeholder="Имя..." aria-describedby="emailHelp">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label for="exampleInputEmail2" class="form-label fs-8 text-light-emphasis">Фамилия
+                            <span class="text-secondary ms-1">*</span></label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInputEmail2" placeholder="Фамилия..." aria-describedby="emailHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary fw-semibold py-2center primary-radius w-100 mb-4">
+                        Cохранить
+                    </button>
+                </form>
+            </div>
+            <div class="modal-footer border-top-dashed px-0 pb-0 pt-4">
+                <button type="button"
+                        class="btn btn-secondary d-flex align-items-center fw-semibold py-2 justify-content-center column-gap-2 primary-radius w-100 m-0"
+                        data-bs-dismiss="modal"><img
+                        src="../assets/images/svg/logout.svg" alt=""> Выйти
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--================ MENUS MODAL | Omonjon ================-->
+<div class="offcanvas offcanvas-top m-2 primary-radius" style="" tabindex="-1" id="offcanvasTop"
+     aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"><img src="../assets/images/svg/site-logo.svg" alt=""></h5>
+        <button type="button"
+                class="rounded-circle-mb primary-shadow border-0 d-flex align-items-center bg-white justify-content-center"
+                data-bs-dismiss="offcanvas" aria-label="Close"><img src="../assets/images/svg/x.svg" alt=""></button>
+    </div>
+    <div class="offcanvas-body overflow-y-visible pt-0">
+        <ul class="d-flex flex-column align-items-center border-top-dashed pt-3 row-gap-3 mb-3 mb-sm-0">
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#">
+                    <img src="../assets/images/svg/shield.svg" alt="">
+                    Гарантийный код
+                </a>
+            </li>
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#">
+                    <img src="../assets/images/svg/calculator.svg" alt="">
+                    Калькулятор полисов
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#">
+                    О нас
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#">
+                    Как стать партнером
+                </a>
+            </li>
+        </ul>
+        <div class="d-sm-none d-flex align-items-center flex-column border-top-dashed pt-3">
+            <div class="nav-item-top d-none dropdown">
+                <!-- Language -->
+
+                <a class="nav-link-sm d-flex align-items-center fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                   href="#" id="navbarDropdownLang" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="../assets/images/ru-flag.png" alt=""> RU
+                </a>
+                <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                    style="min-width: auto">
+                    <li>
+                        <a class="ru d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="../assets/images/en-flag.png" alt="">EN</a>
+                    </li>
+                    <li>
+                        <a class="en d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="../assets/images/uz-flag.png" alt="">UZ</a>
+                    </li>
+                </ul>
+                <!-- End Language -->
+            </div>
+            <a href="./signIn.html"
+               class="btn btn-white primary-radius mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
+                <img src="../assets/images/svg/user.svg" alt="" class="">
+                <span class="text-black fs-8 fw-regular">Войти</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--==================== HEADER | Omonjon ====================-->
+<header class="header">
+    <nav class="py-3" id="myHeader">
+        <div class="d-flex align-items-center justify-content-between px-4">
+            <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="../index.html"><img
+                    alt="LOGO"
+                    src="../assets/images/svg/site-logo.svg"></a>
+            <ul class="d-lg-flex d-none align-items-center column-gap-4 ms-0 ms-xl-4">
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/shield.svg" alt="">
+                        Гарантийный код
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/calculator.svg" alt="">
+                        Калькулятор полисов
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/briefcase.svg" alt="">
+                        О компании
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center column-gap-sm-3 column-gap-2 ms-auto">
+                <div class="nav-item-top dropdown">
+                    <!-- Language -->
+
+                    <a class="nav-link-sm d-flex align-items-center fs-8 fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                       href="#" id="navbarDropdownLangTwo" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="../assets/images/ru-flag.png" alt=""> RU
+                    </a>
+                    <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                        style="min-width: auto">
+                        <li>
+                            <a class="ru fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="../assets/images/en-flag.png" alt="">EN</a>
+                        </li>
+                        <li>
+                            <a class="en fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="../assets/images/uz-flag.png" alt="">UZ</a>
+                        </li>
+                    </ul>
+                    <!-- End Language -->
+                </div>
+                <a href="../emergency.html"
+                   class="btn transition btn-secondary transition primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
+                    <img src="../assets/images/svg/phone.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
+                </a>
+                <a href="./signIn.html"
+                   class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn btn-white transition primary-radius py-2 px-3">
+                    <img src="../assets/images/svg/user.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
+                </a>
+            </div>
+            <button type="button"
+                    class="outline-none border-none bg-white primary-shadow rounded-circle-mb d-lg-none d-flex align-items-center justify-content-center py-2 px-3 ms-3"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                <img src="../assets/images/svg/menu-burger.svg" style="width: 16px;" alt="">
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="account-header mt-5 pt-lg-5">
+        <div class="container pt-2">
+            <h5 class="fs-1 fw-semibold text-black mb-4">Учетная запись</h5>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between pb-4 border-bottom-dashed">
+                <div class="d-flex align-items-center column-gap-2 mb-md-2 mb-3">
+                    <div class="profile-img rounded-circle">
+                        <img src="../assets/images/ava.png" width="100%" height="100%" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start row-gap-1">
+                        <h4 class="fs-4 fw-semibold text-black">John Smith</h4>
+                        <a class="fs-7 text-black d-flex align-items-center column-gap-2" href="tel:+998777777777"><img
+                                src="../assets/images/svg/phone-light.svg" alt="">+998(77)777-7777</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center column-gap-2 mb-2">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="btn btn-white d-flex align-items-center primary-radius fs-7 column-gap-2 py-2">
+                        <img src="../assets/images/svg/edit.svg" alt="">Редактировать
+                    </button>
+                    <button class="btn btn-secondary d-flex align-items-center column-gap-2 py-2 primary-radius fw-semibold"
+                            type="button">
+                        <img src="../assets/images/svg/logout.svg" alt="">Выйти
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="account-policy pt-4 mb-lg-5 pb-5">
+        <div class="container mt-2">
+            <h6 class="text-black fw-semibold fs-5 mb-3">Мои полисы</h6>
+            <div class="border-bottom-dashed pb-2">
+                <div class="row row-gap-3 mb-4">
+                    <div class="col-lg-6">
+                        <div class="bg-white primary-radius primary-border primary-shadow position-relative p-4">
+                            <div class="position-absolute d-flex align-items-start justify-content-end progress-bar-box pt-4 pe-4 z-2">
+                                <div class="progress-arc">
+                                    <svg class="progress-arc__svg" width="112" height="112" viewBox="0 0 200 200">
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#00a86b"/>
+                                                <stop offset="100%" stop-color="#00df8e"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="progress-arc__background" fill="none" stroke="#00A0701A"
+                                              stroke-width="15" stroke-linecap="round"/>
+                                        <path class="progress-arc__progress" fill="none" stroke="#00A070"
+                                              stroke-linecap="round" stroke-width="15"/>
+                                    </svg>
+                                    <div class="progress-arc__text">
+                                        <div class="progress-arc__label">Осталось</div>
+                                        <div class="progress-arc__value">68</div>
+                                        <div class="progress-arc__label">дней</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="../assets/images/shape-logo.png"
+                                 class="position-absolute top-0 end-0 z-1 pt-4 pe-4" alt="">
+                            <div class="d-flex flex-column align-items-start position-relative z-2 row-gap-2 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="text-primary fs-7 fw-semibold me-1">ОСГОВТС (ОСАГО)</h5>
+                                    <img class="mx-2" src="../assets/images/svg/line-small.svg" alt="">
+                                    <h6 class="active">Активный</h6>
+                                </div>
+                                <h5 class="fs-5 fw-semibold text-black">SPARK</h5>
+                                <div class="car-num-font fs-5 car-num d-flex align-items-center w-max-content">
+                                    <div class="car-num-region">01</div>
+                                    <div class="car-num-full d-flex align-items-center">
+                                        Z 802 VA <img class="ms-1" src="../assets/images/flag-car.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-black">12.03.2024 - 11.03.2025</div>
+                            </div>
+                            <div class="d-flex justify-content-between position-relative z-2">
+                                <div class="d-flex align-items-start flex-column row-gap-2">
+                                    <img src="../assets/images/svg/partner2.svg" alt="">
+                                    <h6 class="text-light-emphasis fs-8">EKSL 0615332</h6>
+                                </div>
+                                <a href="#"
+                                   class="btn btn-white d-flex fs-8 text-black align-items-center column-gap-2 primary-radius mt-auto py-2">
+                                    <img src="../assets/images/svg/download.svg" alt="">
+                                    Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white primary-radius primary-border primary-shadow position-relative p-4">
+                            <div class="position-absolute d-flex align-items-start justify-content-end progress-bar-box pt-4 pe-4 z-2">
+                                <div class="progress-arc">
+                                    <svg class="progress-arc__svg" width="112" height="112" viewBox="0 0 200 200">
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#00a86b"/>
+                                                <stop offset="100%" stop-color="#00df8e"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="progress-arc__background" fill="none" stroke="#00A0701A"
+                                              stroke-width="15" stroke-linecap="round"/>
+                                        <path class="progress-arc__progress" fill="none" stroke="#00A070"
+                                              stroke-linecap="round" stroke-width="15"/>
+                                    </svg>
+                                    <div class="progress-arc__text">
+                                        <div class="progress-arc__label">Осталось</div>
+                                        <div class="progress-arc__value">0</div>
+                                        <div class="progress-arc__label">дней</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="../assets/images/shape-logo.png"
+                                 class="position-absolute top-0 end-0 z-1 pt-4 pe-4" alt="">
+                            <div class="d-flex flex-column align-items-start position-relative z-2 row-gap-2 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="text-primary fs-7 fw-semibold me-1">ОСГОВТС (ОСАГО)</h5>
+                                    <img class="mx-2" src="../assets/images/svg/line-small.svg" alt="">
+                                    <h6 class="inactive">Неактивный</h6>
+                                </div>
+                                <h5 class="fs-5 fw-semibold text-black">LACETTI L STYLE AT PLUS</h5>
+                                <div class="car-num-font fs-5 car-num d-flex align-items-center w-max-content">
+                                    <div class="car-num-region">01</div>
+                                    <div class="car-num-full d-flex align-items-center">
+                                        D 071 YA <img class="ms-1" src="../assets/images/flag-car.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-black">Истек срок страхования</div>
+                            </div>
+                            <div class="d-flex justify-content-between position-relative z-2">
+                                <div class="d-flex align-items-start flex-column row-gap-2">
+                                    <img src="../assets/images/svg/partner1.svg" alt="">
+                                    <h6 class="text-light-emphasis fs-8">EKSL 0615332</h6>
+                                </div>
+                                <a href="#"
+                                   class="btn btn-primary d-flex fs-8 text-white align-items-center column-gap-2 primary-radius mt-auto py-2">
+                                    <img src="../assets/images/svg/pay.svg" alt="">
+                                    Оплатить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-2">
+                <h5 class="fw-semibold text-black fs-5 mb-3">Дополнительные услуги</h5>
+                <div class="row row-gap-3">
+                    <div class="col-lg-6">
+                        <div class="bg-white primary-radius primary-border primary-shadow position-relative p-4">
+                            <div class="position-absolute d-flex align-items-start justify-content-end progress-bar-other pt-4 pe-4 z-2">
+                                <div class="progress-arc">
+                                    <svg class="progress-arc__svg" width="112" height="112" viewBox="0 0 200 200">
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#00a86b"/>
+                                                <stop offset="100%" stop-color="#00df8e"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="progress-arc__background" fill="none" stroke="#00A0701A"
+                                              stroke-width="15" stroke-linecap="round"/>
+                                        <path class="progress-arc__progress" fill="none" stroke="#00A070"
+                                              stroke-linecap="round" stroke-width="15"/>
+                                    </svg>
+                                    <div class="progress-arc__text">
+                                        <div class="progress-arc__label">Осталось</div>
+                                        <div class="progress-arc__value">300</div>
+                                        <div class="progress-arc__label">дней</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="../assets/images/shape-logo.png"
+                                 class="position-absolute top-0 end-0 z-1 pt-4 pe-4" alt="">
+                            <div class="d-flex flex-column align-items-start position-relative z-2 row-gap-2 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="text-primary fs-7 fw-semibold me-1">Доп. услуги</h5>
+                                    <img class="mx-2" src="../assets/images/svg/line-small.svg" alt="">
+                                    <h6 class="active">Активный</h6>
+                                </div>
+                                <h5 class="fs-5 fw-semibold text-black">SPARK</h5>
+                                <div class="car-num-font fs-5 car-num d-flex align-items-center w-max-content">
+                                    <div class="car-num-region">01</div>
+                                    <div class="car-num-full d-flex align-items-center">
+                                        Z 802 VA <img class="ms-1" src="../assets/images/flag-car.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-black">12.03.2024 - 11.03.2025</div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start position-relative z-2 row-gap-2 mb-4">
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img src="../assets/images/svg/truck-delivery.svg" alt="">Эвакуация автомобиля
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img src="../assets/images/svg/pencil.svg" alt="">Оформления "Европротокола"
+                                </h6>
+                                <h6 class="fs-7 text-black mb-2 d-flex align-items-center column-gap-2">
+                                    <img src="../assets/images/svg/wheel.svg" alt="">Замена колеса
+                                </h6>
+                            </div>
+                            <div class="d-flex justify-content-between position-relative z-2">
+                                <div class="d-flex align-items-start flex-column row-gap-2">
+                                    <img src="../assets/images/svg/partner2.svg" alt="">
+                                    <h6 class="text-light-emphasis fs-8">EKSL 0615332</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--================ FOOTER | Omonjon ================-->
+<footer class="footer pt-5 mt-md-4 pb-4 bg-transparent">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap flex-column flex-sm-row row-gap-4">
+            <a href="../index.html"><img src="../assets/images/svg/site-logo.svg" alt=""></a>
+            <div class="d-flex column-gap-2">
+                <a href="#"><img src="../assets/images/app-store.png" alt=""></a>
+                <a href="#"><img src="../assets/images/google-play.png" alt=""></a>
+            </div>
+            <div class="d-flex align-items-center column-gap-3 column-gap-sm-0">
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition me-sm-2"
+                   href="#"><img src="../assets/images/svg/telegram.svg" alt=""></a>
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition"
+                   href="#"><img src="../assets/images/svg/instagram.svg" alt=""></a>
+                <a class="d-flex align-items-center column-gap-2 btn btn-primary transition primary-radius btn-footer ms-sm-4"
+                   href="tel:+998900000000"><img class="" src="../assets/images/svg/phone-check.svg" alt=""><span
+                        class="d-none d-sm-block fs-7 fw-semibold">Позвонить сейчас</span></a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between flex-wrap flex-column flex-sm-row row-gap-4 mt-5 pt-lg-2">
+            <div class="text-light-emphasis fs-8">© EpolisPlus 2024. Все права защищены.</div>
+            <div class="d-flex align-items-center justify-content-center column-gap-3 row-gap-1 flex-wrap">
+                <a href="#" class="text-light-emphasis fs-8">Политика конфиденциальности</a>
+                <a href="#" class="text-light-emphasis fs-8">Условия обслуживания</a>
+            </div>
+            <img src="../assets/images/metrika.png" alt="">
+        </div>
+    </div>
+</footer>
+
+<!--================ JQUERY JS 3.6.3v | Omonjon ================-->
+<script src="../assets/script/jquery-3.6.3.js"></script>
+
+<!--================ LOTTIE JS 7.7.7v | Omonjon ================-->
+<script src="../assets/script/lottie-player.js"></script>
+
+<!--================ SWIPER JS 8.1.1v | Omonjon ================-->
+<script src="../assets/script/swiper-bundle.min.js"></script>
+
+<!--================ BOOTSTRAP JS 5.3.1v | Omonjon ================-->
+<script src="../assets/script/bootstrap.bundle.min.js"></script>
+
+<!--================ MAIN JS | Omonjon ================-->
+<script src="../assets/script/main.js?v=1.1"></script>
+<script>
+</script>
+</body>
+</html>

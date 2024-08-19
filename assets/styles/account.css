@@ -1,0 +1,128 @@
+.modal-dialog {
+    max-width: 362px;
+}
+
+.modal-dialog .profile-img {
+    width: 64px;
+    height: 64px;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+}
+
+.active, .inactive {
+    padding: 2px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.active {
+    border: 1px solid #00A0701A;
+    background: #00A0700D;
+    color: var(--bs-primary);
+}
+
+.inactive {
+    border: 1px solid #DC30551A;
+    background: #DC30550D;
+    color: var(--bs-secondary);
+}
+
+.car-num-font {
+    font-family: 'FE-FONT Regular', sans-serif;
+}
+
+.car-num-font.car-num {
+    border: 2px solid #0A0A0A;
+    border-radius: 8px;
+}
+
+.car-num .car-num-region {
+    padding: 5px 7px;
+    border-right: 2px solid black;
+}
+
+.car-num .car-num-full {
+    padding: 5px 7px;
+}
+
+.progress-bar-box,
+.progress-bar-other {
+    top: 0;
+    right: 0;
+}
+
+.progress-arc {
+    position: relative;
+    width: 112px;
+    height: 112px;
+}
+
+.progress-arc__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.progress-arc__value {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.progress-arc__label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .progress-bar-box {
+        top: initial;
+        bottom: 70px;
+    }
+
+    .progress-bar-other {
+        top: initial;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .progress-bar-box {
+        bottom: 90px;
+        right: -15px;
+    }
+
+    .progress-bar-other {
+        top: initial;
+        bottom: 16px;
+    }
+
+    .progress-arc {
+        width: 80px;
+        height: 80px;
+
+        .progress-arc__svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .progress-arc__value {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .progress-arc__label {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}

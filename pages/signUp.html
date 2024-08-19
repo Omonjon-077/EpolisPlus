@@ -21,20 +21,161 @@
     <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="../assets/styles/main.css?v=1.1">
+    <link rel="stylesheet" href="../assets/styles/main.css?v=1.5">
     <link rel="stylesheet" href="../assets/styles/breakpoints.css?v=0.5">
     <link rel="stylesheet" href="../assets/styles/signIn.css?v=0.2">
 
     <title>Регистрация</title>
 </head>
 <body>
+<!--================ MENUS MODAL | Omonjon ================-->
+<div class="offcanvas offcanvas-top m-2 primary-radius" style="" tabindex="-1" id="offcanvasTop"
+     aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"><img src="../assets/images/svg/site-logo.svg" alt=""></h5>
+        <button type="button"
+                class="rounded-circle-mb primary-shadow border-0 d-flex align-items-center bg-white justify-content-center"
+                data-bs-dismiss="offcanvas" aria-label="Close"><img src="../assets/images/svg/x.svg" alt=""></button>
+    </div>
+    <div class="offcanvas-body overflow-y-visible pt-0">
+        <ul class="d-flex flex-column align-items-center border-top-dashed pt-3 row-gap-3 mb-3 mb-sm-0">
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#">
+                    <img src="../assets/images/svg/shield.svg" alt="">
+                    Гарантийный код
+                </a>
+            </li>
+            <li>
+                <a class="fw-semibold text-black"
+                   aria-current="page" href="#">
+                    <img src="../assets/images/svg/calculator.svg" alt="">
+                    Калькулятор полисов
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#">
+                    О нас
+                </a>
+            </li>
+            <li>
+                <a class="fw-regular text-black"
+                   aria-current="page" href="#">
+                    Как стать партнером
+                </a>
+            </li>
+        </ul>
+        <div class="d-sm-none d-flex align-items-center flex-column border-top-dashed pt-3">
+            <div class="nav-item-top d-none dropdown">
+                <!-- Language -->
+
+                <a class="nav-link-sm d-flex align-items-center fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                   href="#" id="navbarDropdownLang" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="../assets/images/ru-flag.png" alt=""> RU
+                </a>
+                <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                    style="min-width: auto">
+                    <li>
+                        <a class="ru d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="../assets/images/en-flag.png" alt="">EN</a>
+                    </li>
+                    <li>
+                        <a class="en d-flex align-items-center column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                           href="#"><img src="../assets/images/uz-flag.png" alt="">UZ</a>
+                    </li>
+                </ul>
+                <!-- End Language -->
+            </div>
+            <a href="../signIn.html"
+               class="btn btn-white primary-radius mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
+                <img src="../assets/images/svg/user.svg" alt="" class="">
+                <span class="text-black fs-8 fw-regular">Войти</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--==================== HEADER | Omonjon ====================-->
+<header class="header">
+    <nav class="py-3" id="myHeader">
+        <div class="d-flex align-items-center justify-content-between px-4">
+            <a class="d-flex align-items-center column-gap-2 me-lg-3 me-xl-4 me-xxl-5 me-0" href="../index.html"><img
+                    alt="LOGO"
+                    src="../assets/images/svg/site-logo.svg"></a>
+            <ul class="d-lg-flex d-none align-items-center column-gap-4 ms-0 ms-xl-4">
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/shield.svg" alt="">
+                        Гарантийный код
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/calculator.svg" alt="">
+                        Калькулятор полисов
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="fw-semibold text-black transition hover-link"
+                       aria-current="page" href="#">
+                        <img src="../assets/images/svg/briefcase.svg" alt="">
+                        О компании
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center column-gap-sm-3 column-gap-2 ms-auto">
+                <div class="nav-item-top dropdown">
+                    <!-- Language -->
+
+                    <a class="nav-link-sm d-flex align-items-center fs-8 fw-semibold text-black column-gap-2 dropdown-toggle dropdown-arrow dropdown-toggle-not pe-3"
+                       href="#" id="navbarDropdownLangTwo" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="../assets/images/ru-flag.png" alt=""> RU
+                    </a>
+                    <ul class="dropdown-menu dropdown-transition rounded-3 p-2" aria-labelledby="navbarDropdownLang"
+                        style="min-width: auto">
+                        <li>
+                            <a class="ru fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="../assets/images/en-flag.png" alt="">EN</a>
+                        </li>
+                        <li>
+                            <a class="en fs-8 fw-semibold d-flex align-items-center transition column-gap-2 px-1 rounded-3 dropdown-item dropdown-item-language"
+                               href="#"><img src="../assets/images/uz-flag.png" alt="">UZ</a>
+                        </li>
+                    </ul>
+                    <!-- End Language -->
+                </div>
+                <a href="./emergency.html"
+                   class="btn transition btn-secondary transition primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
+                    <img src="../assets/images/svg/phone.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
+                </a>
+                <a href="../signIn.html"
+                   class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn btn-white transition primary-radius py-2 px-3">
+                    <img src="../assets/images/svg/user.svg" alt="" class="">
+                    <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
+                </a>
+            </div>
+            <button type="button"
+                    class="outline-none border-none bg-white primary-shadow rounded-circle-mb d-lg-none d-flex align-items-center justify-content-center py-2 px-3 ms-3"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                <img src="../assets/images/svg/menu-burger.svg" style="width: 16px;" alt="">
+            </button>
+        </div>
+    </nav>
+</header>
+
 <main>
     <section class="signIn-section px-3 px-sm-0 py-4">
         <div class="d-flex flex-column align-items-center">
             <img src="../assets/images/svg/signUp.svg" alt="">
             <h5 class="text-black fs-1 fw-semibold mt-3 mb-2">Регистрация</h5>
             <div class="fs-6 text-black mt-1 mb-4 text-center">Введите свои данные, чтобы создать аккаунт.</div>
-            <form action="" method="post" class="container-small d-flex flex-column mt-2">
+            <form action="account.html" method="post" class="container-small d-flex flex-column mt-2">
                 <div class="form-group mb-3">
                     <label for="fullName" class="form-label fs-8 text-light-emphasis">ФИО<span
                             class="text-secondary ms-1">*</span></label>
@@ -72,7 +213,7 @@
                     <div class="form-group">
                         <label for="passwordNum3" class="form-label fs-8 text-light-emphasis text-nowrap">Код подтверждения<span
                                 class="text-secondary ms-1">*</span></label>
-                        <input type="password" required class="form-control" placeholder="Код на картинке"
+                        <input type="text" required class="form-control" placeholder="Код на картинке"
                                id="passwordNum3"
                                aria-describedby="emailHelp">
                     </div>
@@ -91,6 +232,36 @@
     </section>
 </main>
 
+<!--================ FOOTER | Omonjon ================-->
+<footer class="footer pt-5 mt-md-4 pb-4 bg-transparent">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap flex-column flex-sm-row row-gap-4">
+            <a href="../index.html"><img src="../assets/images/svg/site-logo.svg" alt=""></a>
+            <div class="d-flex column-gap-2">
+                <a href="#"><img src="../assets/images/app-store.png" alt=""></a>
+                <a href="#"><img src="../assets/images/google-play.png" alt=""></a>
+            </div>
+            <div class="d-flex align-items-center column-gap-3 column-gap-sm-0">
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition me-sm-2"
+                   href="#"><img src="../assets/images/svg/telegram.svg" alt=""></a>
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition"
+                   href="#"><img src="../assets/images/svg/instagram.svg" alt=""></a>
+                <a class="d-flex align-items-center column-gap-2 btn btn-primary transition primary-radius btn-footer ms-sm-4"
+                   href="tel:+998900000000"><img class="" src="../assets/images/svg/phone-check.svg" alt=""><span
+                        class="d-none d-sm-block fs-7 fw-semibold">Позвонить сейчас</span></a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between flex-wrap flex-column flex-sm-row row-gap-4 mt-5 pt-lg-2">
+            <div class="text-light-emphasis fs-8">© EpolisPlus 2024. Все права защищены.</div>
+            <div class="d-flex align-items-center justify-content-center column-gap-3 row-gap-1 flex-wrap">
+                <a href="#" class="text-light-emphasis fs-8">Политика конфиденциальности</a>
+                <a href="#" class="text-light-emphasis fs-8">Условия обслуживания</a>
+            </div>
+            <img src="../assets/images/metrika.png" alt="">
+        </div>
+    </div>
+</footer>
+
 <!--================ JQUERY JS 3.6.3v | Omonjon ================-->
 <script src="../assets/script/jquery-3.6.3.js"></script>
 
@@ -104,6 +275,6 @@
 <script src="../assets/script/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="../assets/script/main.js?v=0.8"></script>
+<script src="../assets/script/main.js?v=1.1"></script>
 </body>
 </html>

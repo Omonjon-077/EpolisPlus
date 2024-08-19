@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../assets/styles/breakpoints.css?v=0.5">
     <link rel="stylesheet" href="../assets/styles/signIn.css?v=0.2">
 
-    <title>Вход</title>
+    <title>Активировать гарантийный код</title>
 </head>
 <body>
 <!--================ MENUS MODAL | Omonjon ================-->
@@ -88,7 +88,7 @@
                 </ul>
                 <!-- End Language -->
             </div>
-            <a href="#"
+            <a href="./signIn.html"
                class="btn btn-white primary-radius mt-2 py-2 px-2 d-flex justify-content-center column-gap-2 w-100">
                 <img src="../assets/images/svg/user.svg" alt="" class="">
                 <span class="text-black fs-8 fw-regular">Войти</span>
@@ -154,7 +154,7 @@
                     <img src="../assets/images/svg/phone.svg" alt="" class="">
                     <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
                 </a>
-                <a href="#"
+                <a href="./signIn.html"
                    class="d-none d-sm-flex column-gap-2 rounded-circle-mb btn btn-white transition primary-radius py-2 px-3">
                     <img src="../assets/images/svg/user.svg" alt="" class="">
                     <span class="d-none d-xl-block text-black fs-8 fw-semibold">Войти</span>
@@ -172,33 +172,85 @@
 <main>
     <section class="signIn-section px-3 px-sm-0 py-4">
         <div class="d-flex flex-column align-items-center">
-            <img src="../assets/images/svg/signin.svg" alt="">
-            <h5 class="text-black fs-1 fw-semibold mt-3 mb-2">Вход</h5>
-            <div class="fs-6 text-black mt-1 mb-4 text-center">Введите свои данные для входа в аккаунт.</div>
-            <form action="account.html" method="post" class="container-small d-flex flex-column mt-2">
-                 <div class="form-group mb-3">
-                     <label for="phoneNum1" class="form-label fs-8 text-light-emphasis">Номер телефона<span class="text-secondary ms-1">*</span></label>
-                     <input type="text" required class="form-control" placeholder="+998 __-___-__-__" id="phoneNum1" aria-describedby="emailHelp">
-                 </div>
-                <div class="form-group mb-3 position-relative ">
-                    <label for="passwordNum1" class="form-label fs-8 text-light-emphasis">Пароль<span class="text-secondary ms-1">*</span></label>
-                    <input type="password" required class="form-control" placeholder="Ваш пароль" id="passwordNum1" aria-describedby="emailHelp">
-                    <i class="bx bx-show show-hide"></i>
-                </div>
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <div class="d-flex align-items-center">
-                        <input id="rememberMe" class="" type="checkbox" name="rememberMe">
-                        <label for="rememberMe" class="fs-7 text-black checkbox-label">Запомни меня</label>
+            <img src="../assets/images/svg/shield.svg" width="48" height="48" alt="">
+            <h5 class="text-black text-center  fs-1 fw-semibold mt-3 mb-2">Активировать гарантийный код</h5>
+            <div class="fs-6 text-black mt-1 mb-4 text-center">Введите код, чтобы активировать вашу автостраховку и
+                получить полную защиту.
+            </div>
+            <form action="" method="post" class="container-small d-flex flex-column mt-2">
+                <div class="d-flex align-items-center column-gap-2">
+                    <div class="form-group w-100">
+                        <label for="code1" class="form-label fs-8 text-light-emphasis">Гарантийный код</label>
+                        <input type="text" required class="form-control" placeholder="Введите код" id="code1"
+                               aria-describedby="emailHelp">
                     </div>
-                    <a href="#" class="text-primary fs-7">Забыли пароль?</a>
+                    <div class="h-72px d-flex align-items-end">
+                        <button class="btn btn-white d-flex align-items-center primary-radius transition py-2" type="submit"><img
+                                src="../assets/images/svg/search.svg" class="me-2" alt="">Поиск
+                        </button>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary primary-radius mb-4">Войти</button>
-                <a href="./signUp.html" class="text-primary fs-7 text-center">Зарегистрироваться</a>
+                <button type="button"
+                        class="fs-8 fw-semibold bg-transparent text-primary column-gap-2 d-flex align-items-center justify-content-center mt-3 mb-2">
+                    <i class='bx bx-plus fs-7 fw-bold'></i>Добавить гарантийный код
+                </button>
+            </form>
+            <form action="" method="post" class="container-small d-flex flex-column mt-3">
+                <div class="d-flex align-items-center column-gap-2 mb-3">
+                    <div class="form-control d-flex align-items-center column-gap-2 w-100">
+                        <img src="../assets/images/svg/shield.svg" alt="">
+                        <h6 class="fs-7 text-black">ET50Y9HW</h6>
+                    </div>
+                    <div class="">
+                        <button type="button" class="d-flex align-items-center justify-content-center btn-refresh bg-secondary rounded-circle"><img src="../assets/images/svg/trash-white.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="border-bottom-dashed pb-4">
+                    <label for="selectPartner1"
+                           class="d-none">Количество водителей <span
+                            class="text-secondary ms-1">*</span></label>
+                    <select class="form-select text-light-emphasis" id="selectPartner1"
+                            aria-label="Default select example" required>
+                        <option selected value="">Выберите партнера</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3 mt-4">
+                    <label for="car-num" class="form-label fs-8 text-light-emphasis">Гос номер<span
+                            class="text-secondary ms-1">*</span></label>
+                    <input type="password" required class="form-control" placeholder="01 A 001 AA" id="car-num"
+                           aria-describedby="emailHelp">
+                </div>
+                <div class="form-group d-flex column-gap-2 mb-3">
+                    <div class="tech-pas">
+                        <label for="tecPas-num"
+                               class="form-label fs-8 text-light-emphasis ">Серия и номер тех. паспорта<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required type="text" autocomplete="off" class="form-control text-black"
+                               placeholder="AAF" id="tecPas-num">
+                    </div>
+                    <div class="w-100">
+                        <label for="exampleInputPassword7"
+                               class="form-label fs-8 text-light-emphasis invisible">x<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required type="text" autocomplete="off" class="form-control text-black"
+                               placeholder="0000000" id="exampleInputPassword7">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputPassword3"
+                           class="form-label fs-8 text-light-emphasis ">Номер телефона<span
+                            class="text-secondary ms-1">*</span></label>
+                    <input required type="text" autocomplete="off" class="form-control text-black"
+                           placeholder="+998 __-___-__-__" id="exampleInputPassword3">
+                </div>
+                <button type="submit" class="btn btn-primary primary-radius mb-4 py-2">Загрузить данные</button>
             </form>
         </div>
     </section>
 </main>
-
 
 <!--================ FOOTER | Omonjon ================-->
 <footer class="footer pt-5 mt-md-4 pb-4 bg-transparent">

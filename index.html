@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/styles/main.css?v=1.1">
+    <link rel="stylesheet" href="assets/styles/main.css?v=1.5">
     <link rel="stylesheet" href="assets/styles/breakpoints.css?v=0.5">
 
     <title>EpolisPlus</title>
@@ -158,7 +158,7 @@
                             <p class="d-flex align-items-center column-gap-2 bg-light mb-3 primary-radius text-black fw-semibold fs-7 pay-amount w-100">
                                 <img src="./assets/images/svg/coin.svg" alt="">100 000 сум</p>
                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-100 d-flex justify-content-center"
-                               href="#">Оформить</a>
+                               href="pages/kasko/calculate.html">Оформить</a>
                         </div>
                     </div>
                 </div>
@@ -269,7 +269,7 @@
                     </ul>
                     <!-- End Language -->
                 </div>
-                <a href="#!"
+                <a href="./pages/emergency.html"
                    class="btn transition btn-secondary transition primary-radius d-flex rounded-circle-mb column-gap-2 py-2 px-3">
                     <img src="./assets/images/svg/phone.svg" alt="" class="">
                     <span class="d-none d-xl-block text-white fs-8 fw-bold">Экстренный вызов</span>
@@ -502,7 +502,7 @@
                                                href="#" data-bs-toggle="modal"
                                                data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Оформить</a>
+                                               href="pages/kasko/calculate.html">Оформить</a>
                                         </div>
                                     </div>
                                 </div>
@@ -550,7 +550,7 @@
                                                href="#" data-bs-toggle="modal"
                                                data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Оформить</a>
+                                               href="pages/kasko/calculate.html">Оформить</a>
                                         </div>
                                     </div>
                                 </div>
@@ -606,7 +606,7 @@
                                                href="#" data-bs-toggle="modal"
                                                data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Оформить</a>
+                                               href="pages/kasko/calculate.html">Оформить</a>
                                         </div>
                                     </div>
                                 </div>
@@ -664,7 +664,7 @@
                                                href="#" data-bs-toggle="modal"
                                                data-bs-target="#modalKasko">Подробнее</a>
                                             <a class="btn btn-primary transition primary-radius py-2 px-4 w-50 d-flex justify-content-center"
-                                               href="#">Оформить</a>
+                                               href="pages/kasko/calculate.html">Оформить</a>
                                         </div>
                                     </div>
                                 </div>
@@ -675,9 +675,9 @@
                 <div class="tab-pane fade" id="osago-tab-pane" role="tabpanel"
                      aria-labelledby="profile-tab"
                      tabindex="0">
-                    <form class="container-mini mx-auto mb-xl-4 pb-5" action="" method="post">
-                        <div class="d-flex row-gap-3 justify-content-center flex-wrap">
-                            <div class="car-num me-sm-2">
+                    <form class="container-mini mx-auto mb-xl-4 pb-5" action="./pages/osago/calculate.html" method="post">
+                        <div class="row row-gap-3">
+                            <div class="col-3">
                                 <label for="exampleInputEmail2" class="form-label fs-8 text-light-emphasis">Гос номер
                                     <span
                                             class="text-secondary ms-1">*</span></label>
@@ -685,23 +685,28 @@
                                        id="exampleInputEmail2" placeholder="01M571SA"
                                        aria-describedby="emailHelp">
                             </div>
-                            <div class="tech-pas ms-sm-1 me-2">
-                                <label for="exampleInputPassword3"
-                                       class="form-label fs-8 text-light-emphasis ">Серия и номер тех. паспорта<span
-                                        class="text-secondary ms-1">*</span></label>
-                                <input required type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="AAG" id="exampleInputPassword3">
+                            <div class="col-4 ">
+                                <div class="d-flex">
+                                    <div class="w-25 me-2">
+                                        <label for="exampleInputPassword3"
+                                               class="form-label fs-8 text-light-emphasis text-nowrap">Серия и номер
+                                            тех. паспорта<span
+                                                    class="text-secondary ms-1">*</span></label>
+                                        <input required type="text" autocomplete="off" class="form-control text-black"
+                                               placeholder="AAG" id="exampleInputPassword3">
+                                    </div>
+                                    <div class="w-75">
+                                        <label for="exampleInputPassword7"
+                                               class="form-label fs-8 text-light-emphasis invisible">x<span
+                                                class="text-secondary ms-1">*</span></label>
+                                        <input required type="text" autocomplete="off" class="form-control text-black"
+                                               placeholder="9999999" id="exampleInputPassword7">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tech-pas-num me-md-2">
-                                <label for="exampleInputPassword7"
-                                       class="form-label fs-8 text-light-emphasis invisible">x<span
-                                        class="text-secondary ms-1">*</span></label>
-                                <input required type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="9999999" id="exampleInputPassword7">
-                            </div>
-                            <div class="ins-type ms-md-1 me-2">
+                            <div class="col-3">
                                 <label for="exampleInputPassword4"
-                                       class="form-label fs-8 text-light-emphasis">Количество водителей <span
+                                       class="form-label fs-8 text-light-emphasis text-nowrap">Количество водителей <span
                                         class="text-secondary ms-1">*</span></label>
                                 <select class="form-select text-black" id="exampleInputPassword4"
                                         aria-label="Default select example" required>
@@ -711,11 +716,10 @@
                                     <option value="3">Three</option>
                                 </select>
                             </div>
-                            <div class="calc-btn ms-1">
-                                <div class="d-flex align-items-end flex-column">
-                                    <span class="form-label fs-8 text-light-emphasis invisible">hide</span>
+                            <div class="col-2">
+                                <div class="d-flex align-items-start h-72px">
                                     <button type="submit"
-                                            class="btn btn-primary primary-radius transition fs-7 fw-bold">Расчет
+                                            class="btn btn-primary primary-radius transition fs-7 fw-bold mt-auto py-2">Расчет
                                     </button>
                                 </div>
                             </div>
@@ -816,21 +820,21 @@
                                     <h5 class="fs-8 text-light-emphasis mb-2">Цель поездки</h5>
                                     <div class="d-flex column-gap-2">
                                         <input id="trip1" type="radio" class="" name="trips" required>
-                                        <label for="trip1" class="fw-semibold text-black">Туризм / Служебная
+                                        <label for="trip1" class="fw-semibold text-black radio-label">Туризм / Служебная
                                             командировка</label>
                                     </div>
                                     <div class="d-flex column-gap-2">
                                         <input id="trip2" type="radio" class="" name="trips" required>
-                                        <label for="trip2" class="fw-semibold text-black">Работа (Физический
+                                        <label for="trip2" class="fw-semibold text-black radio-label">Работа (Физический
                                             труд)</label>
                                     </div>
                                     <div class="d-flex column-gap-2">
                                         <input id="trip3" type="radio" class="" name="trips" required>
-                                        <label for="trip3" class="fw-semibold text-black">Спорт</label>
+                                        <label for="trip3" class="fw-semibold text-black radio-label">Спорт</label>
                                     </div>
                                     <div class="d-flex column-gap-2">
                                         <input id="trip4" type="radio" class="" name="trips" required>
-                                        <label for="trip4" class="fw-semibold text-black">Учеба</label>
+                                        <label for="trip4" class="fw-semibold text-black radio-label">Учеба</label>
                                     </div>
                                     <button type="submit" class="btn btn-primary primary-radius mt-4">Расчет</button>
                                 </div>
@@ -1248,8 +1252,10 @@
                 <a href="#"><img src="./assets/images/google-play.png" alt=""></a>
             </div>
             <div class="d-flex align-items-center column-gap-3 column-gap-sm-0">
-                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition me-sm-2" href="#"><img src="./assets/images/svg/telegram.svg" alt=""></a>
-                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition" href="#"><img src="./assets/images/svg/instagram.svg" alt=""></a>
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition me-sm-2"
+                   href="#"><img src="./assets/images/svg/telegram.svg" alt=""></a>
+                <a class="social-btn rounded-circle d-flex align-items-center justify-content-center btn-white transition"
+                   href="#"><img src="./assets/images/svg/instagram.svg" alt=""></a>
                 <a class="d-flex align-items-center column-gap-2 btn btn-primary transition primary-radius btn-footer ms-sm-4"
                    href="tel:+998900000000"><img class="" src="./assets/images/svg/phone-check.svg" alt=""><span
                         class="d-none d-sm-block fs-7 fw-semibold">Позвонить сейчас</span></a>
@@ -1284,7 +1290,7 @@
 <script src="assets/script/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/script/main.js?v=0.8"></script>
+<script src="assets/script/main.js?v=1.1"></script>
 </body>
 
 </html>
