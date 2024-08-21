@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../../assets/styles/main.css?v=1.6">
     <link rel="stylesheet" href="../../assets/styles/breakpoints.css?v=0.5">
     <link rel="stylesheet" href="../../assets/styles/policy.css?v=0.3">
-    <title>ОСАГО - Купить</title>
+    <title>Путешествие - Купить</title>
 </head>
 <body>
 <!--================ MENUS MODAL | Omonjon ================-->
@@ -174,9 +174,42 @@
         <img class="w-100 d-none d-sm-block my-4" src="../../assets/images/section-line.png" alt="">
         <div class="row row-gap-4 pt-2">
             <div class="col-lg-8">
-                <h5 class="fw-semibold text-black fs-5 mb-3">Данные собственника транспортного средства</h5>
+                <h5 class="fw-semibold text-black fs-5 mb-3">Детали путешествия</h5>
                 <form action="" method="post" class="row row-gap-4 mb-4">
-                    <div class="col-xl-6 col-lg-5">
+                    <div class="col-12">
+                        <div class="d-flex flex-column pb-4 border-bottom-dashed">
+                            <h5 class="fs-8 text-light-emphasis mb-2">Выберите программу</h5>
+                            <div class="d-flex column-gap-2">
+                                <input id="trip1" checked type="radio" class="" name="trips" required="">
+                                <label for="trip1" class="fw-semibold text-black radio-label">Эконом</label>
+                            </div>
+                            <div class="d-flex column-gap-2">
+                                <input id="trip2" type="radio" class="" name="trips" required="">
+                                <label for="trip2" class="fw-semibold text-black radio-label">Классик</label>
+                            </div>
+                            <div class="d-flex column-gap-2">
+                                <input id="trip3" type="radio" class="" name="trips" required="">
+                                <label for="trip3" class="fw-semibold text-black radio-label">Премиум</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-start pb-4 border-bottom-dashed">
+                            <input id="rememberMe1" class="" type="checkbox" name="rememberMe1">
+                            <label for="rememberMe1" class="fs-7 text-black checkbox-label">Путешествие с семьей</label>
+                        </div>
+                    </div>
+                </form>
+                <h5 class="fw-semibold text-black fs-5 my-2">Информация о страхователе</h5>
+                <form action=" " method="post" class="row row-gap-4 mt-3 mb-4">
+                    <div class="col-xl-4 col-lg-4">
+                        <label for="exampleInput2" class="form-label fs-8 text-light-emphasis">Дата рождения<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required="" type="date" autocomplete="off" class="form-control text-black"
+                               id="exampleInput2" placeholder=""
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-10 col-sm-9 col-8">
                         <div class="d-flex">
                             <div class="w-25 me-2">
                                 <label for="exampleInput1"
@@ -194,115 +227,181 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-10 col-sm-9 col-8">
-                        <label for="exampleInput2" class="form-label fs-8 text-light-emphasis">ПИНФЛ владельца
-                            ТС</label>
-                        <input required="" type="text" autocomplete="off" class="form-control text-black"
-                               id="exampleInput2" value="8374819283918293" readonly="readonly"
-                               aria-describedby="emailHelp">
-                    </div>
                     <div class="col-xl-2 col-lg-3 col-md-2 col-sm-3 col-4">
                         <div class="d-flex align-items-start h-72px">
                             <button type="submit"
                                     class="btn btn-primary d-flex w-100Mb align-items-center justify-content-center column-gap-2 primary-radius transition fs-7 fw-bold mt-auto py-2">
-                                <img src="../../assets/images/svg/search-white.svg" alt=""> Расчет
+                                <img src="../../assets/images/svg/search-white.svg" alt=""> Поиск
                             </button>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <label for="exampleInput3" class="form-label fs-8 text-light-emphasis">Номер телефона
-                            <span class="text-secondary ms-1">*</span></label>
-                        <input required="" type="text" autocomplete="off" class="form-control text-black"
-                               id="exampleInput3" placeholder="+998 __-___-__-__" aria-describedby="emailHelp">
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex align-items-center justify-content-start pb-4 border-bottom-dashed">
-                            <input id="rememberMe" class="" type="checkbox" name="rememberMe">
-                            <label for="rememberMe" class="fs-7 text-black checkbox-label">Владелец является
-                                заявителем</label>
+                    <div class="col-12 my-2">
+                        <div class="d-flex align-items-center justify-content-start border-top-dashed pt-4">
+                            <input id="rememberMe" required class="" type="checkbox" name="rememberMe">
+                            <label for="rememberMe" class="fs-7 text-black checkbox-label">Ознакомлен(а) и согласен(а) с
+                                условиями
+                                <a href="#" class="text-primary">Публичной оферты</a></label>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn disabled primary-radius py-12px w-100">Подать заявление
+                        </button>
+                    </div>
                 </form>
-                <h5 class="fw-semibold text-black fs-5 mb-2">Заявитель</h5>
-                <form action="" method="post" class="row row-gap-4 mb-4">
-                    <div class="col-xl-6 col-lg-5">
+                <!-- Block when input field -->
+                <h5 class="fw-semibold text-black fs-5 my-2">Информация о страхователе</h5>
+                <form action="" method="post" class="row row-gap-4 mt-3 mb-4">
+                    <div class="col-xl-4 col-lg-4">
+                        <label for="exampleInput3" class="form-label fs-8 text-light-emphasis">Дата рождения<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required="" type="date" readonly="readonly" autocomplete="off"
+                               class="form-control text-black"
+                               id="exampleInput3" placeholder=""
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-sm-9 col-8">
                         <div class="d-flex">
                             <div class="w-25 me-2">
                                 <label for="exampleInput4"
                                        class="form-label fs-8 text-light-emphasis text-nowrap">Серия и номер Паспортa/ID<span
                                         class="text-secondary ms-1">*</span></label>
-                                <input required="" type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="AAG" id="exampleInput4">
+                                <input required="" type="text" readonly="readonly" autocomplete="off"
+                                       class="form-control text-black"
+                                       value="AC" id="exampleInput4">
                             </div>
                             <div class="w-75">
                                 <label for="exampleInput5"
                                        class="form-label fs-8 text-light-emphasis invisible">x<span
                                         class="text-secondary ms-1">*</span></label>
-                                <input required="" type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="9999999" id="exampleInput5">
+                                <input required="" type="text" readonly="readonly" autocomplete="off"
+                                       class="form-control text-black"
+                                       value="2745577" id="exampleInput5">
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-10 col-sm-9 col-8">
-                        <label for="exampleInput6" class="form-label fs-8 text-light-emphasis">ПИНФЛ владельца ТС
-                            <span class="text-secondary ms-1">*</span></label>
-                        <input required="" type="text" autocomplete="off" class="form-control text-black"
-                               id="exampleInput6" placeholder="00000000000000" aria-describedby="emailHelp">
-                    </div>
-                    <div class="col-xl-2 col-lg-3 col-md-2 col-sm-3 col-4">
-                        <div class="d-flex align-items-start h-72px">
+                    <div class="col-xl-3 col-lg-3 col-sm-3 col-4">
+                        <div class="d-flex justify-content-end h-72px">
                             <button type="submit"
-                                    class="btn btn-primary d-flex w-100Mb align-items-center justify-content-center column-gap-2 primary-radius transition fs-7 fw-bold mt-auto py-2">
-                                <img src="../../assets/images/svg/search-white.svg" alt=""> Расчет
+                                    class="btn btn-secondary d-flex w-100Mb align-items-center justify-content-center column-gap-2 primary-radius transition fs-7 fw-bold mt-auto py-2">
+                                <img src="../../assets/images/svg/x-white.svg" alt=""> Сбросить
                             </button>
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput14" class="form-label fs-8 text-light-emphasis">Имя</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput14" readonly="readonly" value="KOMOLJON" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput15" class="form-label fs-8 text-light-emphasis">Фамилия</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput15" readonly="readonly" value="QO‘CHQOROV" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput16" class="form-label fs-8 text-light-emphasis">Отчество</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput16" readonly="readonly" value="MUXAMADJON O‘G‘LI"
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="exampleInput7" class="form-label fs-8 text-light-emphasis">Апп Пинфл</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput7" readonly="readonly" value="42211650067832"
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="exampleInput18" class="form-label fs-8 text-light-emphasis">Номер телефона<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput18" value="+998 (97) 777-77-77" maxlength="13"
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-12 my-2">
+                        <div class="d-flex align-items-center justify-content-start border-bottom-dashed pb-4">
+                            <input id="rememberM3" required class="" type="checkbox" name="rememberM3">
+                            <label for="rememberM3" class="fs-7 text-black checkbox-label">Я тоже путешественник</label>
+                        </div>
+                    </div>
+                </form>
+                <h5 class="fw-semibold text-black fs-5 mb-2">Путешественник 1</h5>
+                <form action="" method="post" class="row row-gap-4 mt-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="exampleInput8" class="form-label fs-8 text-light-emphasis">Дата рождения<span
+                                class="text-secondary ms-1">*</span></label>
+                        <input required="" type="date" readonly="readonly" autocomplete="off"
+                               class="form-control text-black"
+                               id="exampleInput8" placeholder=""
+                               aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="w-25 me-2">
+                                <label for="exampleInput9"
+                                       class="form-label fs-8 text-light-emphasis text-nowrap">Серия и номер Паспортa/ID<span
+                                        class="text-secondary ms-1">*</span></label>
+                                <input required="" type="text" readonly="readonly" autocomplete="off"
+                                       class="form-control text-black"
+                                       value="AC" id="exampleInput9">
+                            </div>
+                            <div class="w-75">
+                                <label for="exampleInput10"
+                                       class="form-label fs-8 text-light-emphasis invisible">x<span
+                                        class="text-secondary ms-1">*</span></label>
+                                <input required="" type="text" readonly="readonly" autocomplete="off"
+                                       class="form-control text-black"
+                                       value="2745577" id="exampleInput10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput11" class="form-label fs-8 text-light-emphasis">Имя</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput11" readonly="readonly" value="KOMOLJON" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput12" class="form-label fs-8 text-light-emphasis">Фамилия</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput12" readonly="readonly" value="QO‘CHQOROV" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInput13" class="form-label fs-8 text-light-emphasis">Отчество</label>
+                        <input required="" type="text" autocomplete="off" class="form-control text-black"
+                               id="exampleInput13" readonly="readonly" value="MUXAMADJON O‘G‘LI"
+                               aria-describedby="emailHelp">
                     </div>
                     <div class="col-12">
                         <div class="border-bottom-dashed"></div>
                     </div>
                 </form>
                 <div class="d-flex align-items-center justify-content-between mt-2">
-                    <h5 class="fw-semibold text-black fs-5 mb-2">Родственник: 1</h5>
+                    <h5 class="fw-semibold text-black fs-5 mb-2">Путешественник 2</h5>
                     <button type="button"
                             class="btn btn-secondary primary-radius d-flex align-items-center column-gap-2 justify-content-center py-2">
                         <img src="../../assets/images/svg/trash-white.svg" alt="">Удалить
                     </button>
                 </div>
                 <form action="" method="post" class="row row-gap-4 mb-4">
-                    <div class="col-12">
-                        <label for="exampleInputPassword4" class="form-label fs-8 text-light-emphasis text-nowrap">Гражданство
+                    <div class="col-lg-4 col-sm-12">
+                        <label for="exampleInput19" class="form-label fs-8 text-light-emphasis">Дата рождения
                             <span class="text-secondary ms-1">*</span></label>
-                        <select class="form-select text-black" id="exampleInputPassword4"
-                                aria-label="Default select example" required="">
-                            <option selected="" value="">Select</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <input required="" type="date" autocomplete="off" class="form-control text-black"
+                               id="exampleInput19" placeholder="00000000000000" aria-describedby="emailHelp">
                     </div>
-                    <div class="col-xl-6 col-lg-5">
+                    <div class="col-xl-6 col-lg-5 col-md-10 col-sm-9 col-8">
                         <div class="d-flex">
                             <div class="w-25 me-2">
-                                <label for="exampleInput7"
-                                       class="form-label fs-8 text-light-emphasis text-nowrap">Серия и номер Паспортa/ID<span
-                                        class="text-secondary ms-1">*</span></label>
+                                <label for="exampleInput17" class="form-label fs-8 text-light-emphasis text-nowrap">Серия
+                                    и номер Паспортa/ID<span class="text-secondary ms-1">*</span></label>
                                 <input required="" type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="AAG" id="exampleInput7">
+                                       placeholder="AAG" id="exampleInput17">
                             </div>
                             <div class="w-75">
-                                <label for="exampleInput8"
-                                       class="form-label fs-8 text-light-emphasis invisible">x<span
+                                <label for="exampleInput20" class="form-label fs-8 text-light-emphasis invisible">x<span
                                         class="text-secondary ms-1">*</span></label>
                                 <input required="" type="text" autocomplete="off" class="form-control text-black"
-                                       placeholder="9999999" id="exampleInput8">
+                                       placeholder="9999999" id="exampleInput20">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-10 col-sm-9 col-8">
-                        <label for="exampleInput9" class="form-label fs-8 text-light-emphasis">ПИНФЛ владельца ТС
-                            <span class="text-secondary ms-1">*</span></label>
-                        <input required="" type="text" autocomplete="off" class="form-control text-black"
-                               id="exampleInput9" placeholder="00000000000000" aria-describedby="emailHelp">
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-2 col-sm-3 col-4">
                         <div class="d-flex align-items-start h-72px">
@@ -315,50 +414,49 @@
                     <div class="col-12">
                         <button type="button"
                                 class="btn btn-white primary-radius d-flex align-items-center justify-content-center column-gap-2 py-2 w-100Mb">
-                            <img src="../../assets/images/svg/plus.svg" alt=""> Добавить родственника
+                            <img src="../../assets/images/svg/plus.svg" alt=""> Добавить путешественника
                         </button>
                     </div>
+                    <div class="col-12 my-2">
+                        <div class="d-flex align-items-center justify-content-start border-top-dashed pt-4">
+                            <input id="rememberM4" required="" class="" type="checkbox" name="rememberM4">
+                            <label for="rememberM4" class="fs-7 text-black checkbox-label">Ознакомлен(а) и согласен(а) с
+                                условиями
+                                <a href="#" class="text-primary">Публичной оферты</a></label>
+                        </div>
+                    </div>
                     <div class="col-12">
-                        <div class="border-bottom-dashed"></div>
+                        <button type="submit" class="btn btn-primary primary-radius py-12px w-100">Подать заявление
+                        </button>
                     </div>
                 </form>
-                <div class="col-12">
-                    <a href="approve.html" class="btn btn-primary d-flex w-100Mb align-items-center justify-content-center column-gap-2 primary-radius transition fs-7 fw-bold py-12px">Перейти к осмотру
-                        <img src="../../assets/images/svg/arrow-right-white.svg" alt=""></a>
-                </div>
             </div>
             <div class="col-lg-4">
-                <h5 class="fw-semibold text-black fs-5 mb-3">Информация об автомобиле:</h5>
+                <h5 class="fw-semibold text-black fs-5 mb-3">Детали путешествия</h5>
                 <div class="d-flex justify-content-center bg-white primary-radius primary-shadow primary-border w-100 py-1 px-3 mb-2">
                     <div class="row w-100">
                         <div class="col-12">
                             <div class="d-flex flex-column row-gap-1 py-12px border-bottom-dashed w-100">
-                                <h6 class="text-light-emphasis fs-8">Владелец автомобиля</h6>
-                                <h5 class="fs-7 text-black">QO‘CHQOROV KOMOLJON MUXAMADJON O‘G‘LI</h5>
+                                <h6 class="text-light-emphasis fs-8">Страны</h6>
+                                <h5 class="fs-7 text-black">Великобритания, Франция</h5>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column row-gap-1 py-12px border-bottom-dashed w-100">
-                                <h6 class="text-light-emphasis fs-8">Государственный номер</h6>
-                                <h5 class="fs-7 text-black">01A001AA</h5>
+                                <h6 class="text-light-emphasis fs-8">Дата начала</h6>
+                                <h5 class="fs-7 text-black">13.07.2024</h5>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column py-12px border-bottom-dashed w-100">
-                                <h6 class="text-light-emphasis fs-8">Модель</h6>
-                                <h5 class="fs-7 text-black">BUGATTI</h5>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex flex-column py-12px border-bottom-dashed w-100">
-                                <h6 class="text-light-emphasis fs-8">Серия и номер тех. паспорта</h6>
-                                <h5 class="fs-7 text-black">AAF 1500718</h5>
+                                <h6 class="text-light-emphasis fs-8">Дни</h6>
+                                <h5 class="fs-7 text-black">7</h5>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column py-12px">
-                                <h6 class="text-light-emphasis fs-8">Регион</h6>
-                                <h5 class="fs-7 text-black">г.Ташкент и Ташкентская область</h5>
+                                <h6 class="text-light-emphasis fs-8">Цель поездки</h6>
+                                <h5 class="fs-7 text-black">Туризм / Служебная командировка</h5>
                             </div>
                         </div>
                     </div>
@@ -375,32 +473,27 @@
                         <div class="col-12">
                             <div class="d-flex flex-column row-gap-1 py-12px border-bottom-dashed w-100">
                                 <h6 class="text-light-emphasis fs-8">Стоимость полиса</h6>
-                                <h5 class="fs-7 text-black">168 000 сум</h5>
+                                <h5 class="fs-7 text-black">6 500.00 сўм</h5>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column py-12px w-100">
                                 <h6 class="text-light-emphasis fs-8">Страховая сумма</h6>
-                                <h5 class="fs-7 text-black">40 000 000.00 сўм</h5>
+                                <h5 class="fs-7 text-black">20 000 EUR</h5>
                             </div>
                         </div>
                     </div>
                 </div>
+                <h5 class="fw-semibold text-black fs-5 mt-4 mb-3">Период страхования</h5>
                 <div class="d-flex justify-content-center bg-white primary-radius primary-shadow primary-border w-100 p-3 mb-3">
-                    <div class="row row-gap-3">
-                        <div class="col-12">
-                            <div class="d-flex flex-column row-gap-1 pb-3 border-bottom-dashed w-100">
-                                <h6 class="text-light-emphasis fs-8">Период страхования</h6>
-                                <h5 class="fs-7 text-black">1 год</h5>
-                            </div>
-                        </div>
-                        <div class="col-12">
+                    <div class="row row-gap-3 w-100">
+                        <div class="col-lg-12 col-sm-6">
                             <label for="exampleInputDate2" class="form-label fs-8 text-light-emphasis">Дата
                                 начала</label>
                             <input required="" type="date" autocomplete="off" class="form-control"
                                    id="exampleInputDate2" placeholder="" aria-describedby="emailHelp">
                         </div>
-                        <div class="col-12">
+                        <div class="col-lg-12 col-sm-6">
                             <label for="exampleInputDate1" class="form-label fs-8 text-light-emphasis">Дата
                                 окончания</label>
                             <input required="" type="date" autocomplete="off" class="form-control"

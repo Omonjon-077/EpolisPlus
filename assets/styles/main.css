@@ -150,14 +150,7 @@ button[aria-expanded^="true"] i {
     color: #A3A3A3 !important;
     background-color: #0A0A0A08 !important;
     opacity: 1 !important;
-    border-color: #DDDDDD !important
-}
-
-.btn.disabled {
-    color: #A3A3A3;
-    background-color: #0A0A0A08;
-    opacity: 1;
-    border-color: #DDDDDD
+    border: 1px solid  #DDDDDD;
 }
 
 .border-end-dashed {
@@ -467,6 +460,7 @@ input[type=radio] {
 .radio-label {
     padding-left: 30px;
     position: relative;
+    margin-left: -9px;
 }
 
 .radio-label::after {
